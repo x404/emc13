@@ -4076,20 +4076,26 @@ section {
 ---------------------------*/
 /* =services
 ---------------------------*/
-#services-carousel .slick-prev, #services-carousel .slick-next {
+#services-carousel .slick-prev, #services-carousel .slick-next,
+#news-carousel .slick-prev,
+#news-carousel .slick-next {
   position: absolute;
   top: 50%;
   margin-top: -16px;
   transition: .3s; }
 
-#services-carousel .slick-prev {
+#services-carousel .slick-prev,
+#news-carousel .slick-prev {
   left: -50px; }
-  #services-carousel .slick-prev:hover {
+  #services-carousel .slick-prev:hover,
+  #news-carousel .slick-prev:hover {
     left: -55px; }
 
-#services-carousel .slick-next {
+#services-carousel .slick-next,
+#news-carousel .slick-next {
   right: -50px; }
-  #services-carousel .slick-next:hover {
+  #services-carousel .slick-next:hover,
+  #news-carousel .slick-next:hover {
     right: -55px; }
 
 .carousel {
@@ -4143,6 +4149,12 @@ section {
 
 .item-reviews__text {
   line-height: 1.7; }
+
+#news-carousel .slick-slide {
+  text-align: center; }
+  #news-carousel .slick-slide img {
+    margin-left: auto;
+    margin-right: auto; }
 
 /* =mobile-menu
 ---------------------------*/

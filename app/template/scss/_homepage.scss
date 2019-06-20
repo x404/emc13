@@ -429,7 +429,9 @@
 
 /* =services
 ---------------------------*/
-#services-carousel{
+#services-carousel,
+#news-carousel
+{
 	.slick{
 		&-prev,
 		&-next{
@@ -530,4 +532,16 @@
 	&__text{
 		line-height: 1.7;
 	}
+}
+
+
+#news-carousel
+{
+	.slick-slide{
+		text-align: center;
+		img{
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}	
 }

@@ -23,6 +23,13 @@ $(document).ready(function(){
 		slidesToScroll: 1
 	});
 
+	$('#news-carousel').slick({
+		prevArrow:'<button class="slick-arrow slick-prev" aria-label="Назад" type="button"><-</button>',
+		nextArrow:'<button class="slick-arrow slick-next" aria-label="Вперед" type="button">-></button>',
+		slidesToShow: 4,
+		arrows: true,
+		slidesToScroll: 1
+	});
 
 	// mobile-menu
 	$('#navbar').each(function(){
