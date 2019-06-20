@@ -3992,6 +3992,9 @@ section {
 .homepage .services .carousel {
   padding-top: 1rem; }
 
+.homepage .clients {
+  margin-top: 1rem; }
+
 /* =advantage
 ---------------------------*/
 .advantage {
@@ -4088,6 +4091,17 @@ section {
 
 /* =/services
 ---------------------------*/
+.item-clients__link {
+  display: flex;
+  height: 170px;
+  width: 170px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 1.5rem; }
+  .item-clients__link:hover {
+    border-color: #808080; }
+
 /* =mobile-menu
 ---------------------------*/
 .show-sm,
