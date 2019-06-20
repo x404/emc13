@@ -281,5 +281,25 @@
 			}
 
 		}
+
+
+		// address
+		.address{
+			bottom: 28px;
+			color: $color2;
+			font-style: italic;
+			position: absolute;
+			right: 0;
+			text-align: right;
+			z-index: 10;
+			a{
+				color: $color2;
+				border-bottom: 1px dashed;
+				&:hover{
+					border-bottom-color: rgba(255,255,255,0);
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }

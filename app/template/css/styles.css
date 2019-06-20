@@ -303,6 +303,36 @@ template {
   font-weight: normal;
   font-style: normal; }
 
+/* font-family: "SegoeUIRegular"; */
+@font-face {
+  font-family: "SegoeUIRegular";
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* font-family: "SegoeUIBold"; */
+@font-face {
+  font-family: "SegoeUIBold";
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "SegoeUIRegular";
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "SegoeUIBoldItalic";
+  src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot");
+  src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.woff") format("woff"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
 *,
 *::before,
 *::after {
@@ -3540,7 +3570,8 @@ html {
 body {
   font-size: 14px;
   font-size: 1.4rem;
-  font-display: swap; }
+  font-display: swap;
+  font-family: "SegoeUIRegular"; }
 
 html, body {
   height: 100%; }
@@ -3660,6 +3691,36 @@ em strong {
   src: local("DS Eraser Cyr"), url("../fonts/DS Eraser Cyr.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+
+/* font-family: "SegoeUIRegular"; */
+@font-face {
+  font-family: "SegoeUIRegular";
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* font-family: "SegoeUIBold"; */
+@font-face {
+  font-family: "SegoeUIBold";
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "SegoeUIRegular";
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "SegoeUIBoldItalic";
+  src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot");
+  src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.woff") format("woff"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 
 .webp .homepage .header {
   background-image: url(../images/bg/header-bg.webp); }
@@ -3857,6 +3918,20 @@ em strong {
       top: 56px;
       left: 267px;
       transform: rotate(10deg) scaleY(-1); }
+  .homepage .header .address {
+    bottom: 28px;
+    color: #fff;
+    font-style: italic;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    z-index: 10; }
+    .homepage .header .address a {
+      color: #fff;
+      border-bottom: 1px dashed; }
+      .homepage .header .address a:hover {
+        border-bottom-color: rgba(255, 255, 255, 0);
+        text-decoration: none; }
 
 /* =mobile-menu
 ---------------------------*/
