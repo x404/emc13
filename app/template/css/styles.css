@@ -313,11 +313,11 @@ template {
 
 /* font-family: "SegoeUIBold"; */
 @font-face {
-  font-family: "SegoeUIBold";
+  font-family: "SegoeUIRegular";
   src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
   src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
   font-style: normal;
-  font-weight: normal; }
+  font-weight: bold; }
 
 @font-face {
   font-family: "SegoeUIRegular";
@@ -3568,10 +3568,12 @@ html {
   font-size: 62.5%; }
 
 body {
+  background: url(../images/bg.png) #ebeeef;
   font-size: 14px;
   font-size: 1.4rem;
   font-display: swap;
-  font-family: "SegoeUIRegular"; }
+  font-family: "SegoeUIRegular";
+  font-style: italic; }
 
 html, body {
   height: 100%; }
@@ -3658,19 +3660,42 @@ em strong {
   .tdu:hover {
     text-decoration: none; }
 
-.before, .homepage .header .nav li:before, .homepage .header .icon:after {
+.before, .topline:before, .homepage .header .nav li:before, .homepage .header .icon:after {
   content: "";
   display: block;
   position: absolute; }
 
-/* =header
----------------------------*/
-/* =/header
----------------------------*/
-/* =navigation
----------------------------*/
-/* =/navigation
----------------------------*/
+h1.title {
+  font-size: 3rem;
+  color: #808080;
+  line-height: 1.2;
+  font-style: normal;
+  text-align: center; }
+  h1.title a {
+    color: currentColor;
+    border-bottom: 2px dashed; }
+    h1.title a:hover {
+      color: #2f4f8e;
+      border-bottom-color: #2f4f8e;
+      text-decoration: none; }
+
+.text p {
+  line-height: 1.7;
+  margin: 2.5rem 0; }
+
+section {
+  padding: 2.7rem 0; }
+
+.topline {
+  position: relative; }
+  .topline:before {
+    background: linear-gradient(to right, #eef1f2 0%, #b6b8b8 50%, #eef1f2 100%);
+    height: 1px;
+    left: 50%;
+    margin-left: -192px;
+    top: 0;
+    width: 384px; }
+
 /* =main
 ---------------------------*/
 .tab-content > .tab-pane {
@@ -3702,11 +3727,11 @@ em strong {
 
 /* font-family: "SegoeUIBold"; */
 @font-face {
-  font-family: "SegoeUIBold";
+  font-family: "SegoeUIRegular";
   src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
   src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
   font-style: normal;
-  font-weight: normal; }
+  font-weight: bold; }
 
 @font-face {
   font-family: "SegoeUIRegular";
@@ -3932,6 +3957,32 @@ em strong {
       .homepage .header .address a:hover {
         border-bottom-color: rgba(255, 255, 255, 0);
         text-decoration: none; }
+
+.advantage__item {
+  padding: 8.4rem 5.2rem 0; }
+
+.advantage__link {
+  text-decoration: none; }
+  .advantage__link:hover {
+    color: #000;
+    text-decoration: none; }
+    .advantage__link:hover .advantage__pic {
+      filter: brightness(5) invert(1); }
+
+.advantage__pic {
+  margin-bottom: 5rem;
+  min-height: 90px;
+  transition: filter .3s; }
+
+.advantage__title {
+  color: #404040;
+  font-style: normal;
+  margin-bottom: .5rem; }
+
+.advantage__text {
+  color: #000; }
+  .advantage__text p {
+    line-height: 1.25; }
 
 /* =mobile-menu
 ---------------------------*/

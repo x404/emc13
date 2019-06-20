@@ -303,3 +303,40 @@
 		}
 	}
 }
+
+
+.advantage{
+	&__item{
+		padding: 8.4rem 5.2rem 0;
+	}
+
+	&__link{
+		text-decoration: none;
+		&:hover{
+			color: $color1;
+			text-decoration: none;
+			.advantage{
+				&__pic{
+					filter: brightness(5) invert(1);
+				}
+			}
+		}
+	}
+
+	&__pic{
+		margin-bottom: 5rem;
+		min-height: 90px;
+		transition: filter .3s;
+	}
+	&__title{
+		color: $color6;
+		font-style: normal;
+		margin-bottom: .5rem;
+	}
+	&__text{
+		color: $color1;
+		p{
+			line-height: 1.25;			
+		}
+	}
+}
