@@ -3660,7 +3660,7 @@ em strong {
   .tdu:hover {
     text-decoration: none; }
 
-.before, .topline:before, .homepage .header .nav li:before, .homepage .header .icon:after {
+.before, .topline:before, .homepage .header .nav li:before, .homepage .header .icon:after, .works:before, .works:after, .works__link:before {
   content: "";
   display: block;
   position: absolute; }
@@ -3958,31 +3958,68 @@ section {
         border-bottom-color: rgba(255, 255, 255, 0);
         text-decoration: none; }
 
-.advantage__item {
-  padding: 8.4rem 5.2rem 0; }
-
-.advantage__link {
-  text-decoration: none; }
-  .advantage__link:hover {
-    color: #000;
+.advantage {
+  position: relative;
+  z-index: 2; }
+  .advantage__item {
+    padding: 8.4rem 5.2rem 0; }
+  .advantage__link {
     text-decoration: none; }
-    .advantage__link:hover .advantage__pic {
-      filter: brightness(5) invert(1); }
+    .advantage__link:hover {
+      color: #000;
+      text-decoration: none; }
+      .advantage__link:hover .advantage__pic {
+        filter: brightness(5) invert(1); }
+  .advantage__pic {
+    margin-bottom: 5rem;
+    min-height: 90px;
+    transition: filter .3s; }
+  .advantage__title {
+    color: #404040;
+    font-style: normal;
+    margin-bottom: .5rem; }
+  .advantage__text {
+    color: #000; }
+    .advantage__text p {
+      line-height: 1.25; }
 
-.advantage__pic {
-  margin-bottom: 5rem;
-  min-height: 90px;
-  transition: filter .3s; }
-
-.advantage__title {
-  color: #404040;
-  font-style: normal;
-  margin-bottom: .5rem; }
-
-.advantage__text {
-  color: #000; }
-  .advantage__text p {
-    line-height: 1.25; }
+.works {
+  background-color: #d9d9d9;
+  margin: 8rem 0 16rem;
+  position: relative; }
+  .works .container {
+    margin-top: -3.5rem;
+    z-index: 3;
+    position: relative; }
+  .works:before, .works:after {
+    background-size: cover !important;
+    width: 100%; }
+  .works:before {
+    background: url(../images/work-top.png) no-repeat;
+    top: -185px;
+    height: 216px; }
+  .works:after {
+    background: url(../images/work-bottom.png) no-repeat;
+    bottom: -190px;
+    height: 195px; }
+  .works [class*=grid-] {
+    grid-row-gap: 23px; }
+  .works__list {
+    margin: 3.7rem 0 1rem; }
+  .works__link {
+    display: inline-block;
+    position: relative; }
+    .works__link:before {
+      border-radius: 15px;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      top: 0;
+      transition: opacity .3s;
+      width: 100%;
+      background: #2f4f8e; }
+    .works__link:hover:before {
+      opacity: .5; }
 
 /* =mobile-menu
 ---------------------------*/
