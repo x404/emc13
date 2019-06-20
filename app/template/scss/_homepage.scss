@@ -341,6 +341,11 @@
 	.clients{
 		margin-top: 1rem;
 	}
+
+	.reviews{
+		background-color: $color10;
+		padding: 2rem 0;
+	}
 }
 
 
@@ -485,7 +490,6 @@
 
 }
 
-
 .item-clients{
 	&__link{
 		// background-color: $color2;
@@ -500,5 +504,30 @@
 		&:hover{
 			border-color: $color4;
 		}
+	}
+}
+
+
+#reviews-carousel{
+	margin-top: 5rem;	
+}
+
+.item-reviews{
+	&__meta{
+		font-weight: bold;
+		font-style: italic;
+		font-size: 1.8rem;
+		color: $color1;
+		.date{
+			color: $color4;
+		}
+		.separator{
+			color: $color5;
+			margin: 0 .5rem;
+		}
+	}
+
+	&__text{
+		line-height: 1.7;
 	}
 }

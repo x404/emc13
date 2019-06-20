@@ -16,6 +16,13 @@ $(document).ready(function(){
 		slidesToScroll: 1
 	});
 
+	$('#reviews-carousel').slick({
+		slidesToShow: 1,
+		arrows: false,
+		dots: true,
+		slidesToScroll: 1
+	});
+
 
 	// mobile-menu
 	$('#navbar').each(function(){
