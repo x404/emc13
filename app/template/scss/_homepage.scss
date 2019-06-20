@@ -1,0 +1,71 @@
+.webp{
+	.homepage{
+		.header{
+			background-image: url(../images/bg/header-bg.webp);
+		}
+	}	
+}
+.homepage{
+	.header{
+		background: url(../images/bg/header-bg.jpg) no-repeat;
+		background-size: cover;
+		// position: relative;
+		.logo{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%)	
+		}
+
+		.container{
+			position: relative;
+			height: 920px;
+		}
+
+		.nav{
+			li{
+				position: absolute;
+			}
+			&-1{
+				left: 45px;
+				top: 188px;
+			}
+			a{
+				background: url(../images/menu.svg) no-repeat;
+				width: 259px;
+				height: 169px;
+				opacity: .55;
+				&:hover{
+					opacity: 1;
+				}				
+			}
+			&-title{
+				position: absolute;
+				color: #808080;
+				text-transform: uppercase;
+				font-size: 2.1rem;
+			}
+		}
+		.icon{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			&:before{
+				content: "";
+				display: block;
+				margin-top: -15px;
+			}
+			&:after{
+				@extend .before;
+				
+			}
+
+			&-1{
+				&:before{
+					@include sprite($icon-icon-1);
+				}
+			}
+		}
+	}
+}
