@@ -302,10 +302,46 @@
 			}
 		}
 	}
+
+	.works{
+		background-color: $color7;
+		margin: 8rem 0 9rem;
+		position: relative;		
+
+		.container{
+			margin-top: -3.5rem;
+			z-index: 3;
+			position: relative;
+		}
+		&:before,
+		&:after{
+			@extend .before;
+			background-size: cover !important;
+			width: 100%;
+		}
+
+		&:before{
+			background: url(../images/work-top.png) no-repeat;
+			top: -185px;
+			height: 216px;
+		}
+		&:after{
+			background: url(../images/work-bottom.png) no-repeat;
+			bottom: -190px;
+			height: 195px;
+		}
+	}
+
+	.services{
+		.carousel{
+			padding-top: 1rem;
+		}
+	}
 }
 
 
-
+/* =advantage
+---------------------------*/
 .advantage{
 	position: relative;
 	z-index: 2;
@@ -343,45 +379,20 @@
 		}
 	}
 }
+/* =/advantage
+---------------------------*/
 
 
-
+/* =works
+---------------------------*/
 .works{
-	// background: url(../images/work-bottom.png) no-repeat, url(../images/work-top.png) no-repeat;
-	background-color: $color7;
-	margin: 8rem 0 16rem;
-	position: relative;
-	.container{
-		margin-top: -3.5rem;
-		z-index: 3;
-		position: relative;
-	}
-	&:before,
-	&:after{
-		@extend .before;
-		background-size: cover !important;
-		width: 100%;
-	}
-
-	&:before{
-		background: url(../images/work-top.png) no-repeat;
-		top: -185px;
-		height: 216px;
-	}
-	&:after{
-		background: url(../images/work-bottom.png) no-repeat;
-		bottom: -190px;
-		height: 195px;
-	}
-
-
 	[class*=grid-]{
 		grid-row-gap: 23px;	
 	}
 	&__list{
 		margin: 3.7rem 0 1rem;
 	}
-	
+
 	&__link{
 		display: inline-block;
 		position: relative;
@@ -403,3 +414,64 @@
 		}
 	}
 }
+/* =/works
+---------------------------*/
+
+
+/* =services
+---------------------------*/
+#services-carousel{
+	.slick{
+		&-prev,
+		&-next{
+			position: absolute;
+			top: 50%;
+			margin-top: -16px;
+			transition: .3s;
+		}
+		&-prev{
+			left: -50px;
+			&:hover{
+				left: -55px;
+			}
+		}
+
+		&-next{
+			right: -50px;
+			&:hover{
+				right: -55px;
+			}
+		}
+	}
+}
+
+.carousel{
+	padding-left: 5.5rem;
+	padding-right: 5.5rem;
+}
+.services{
+}
+.item-services{
+	width: 168px;
+	&__link{
+		background-color: $color8;			
+		border-radius: 15px;
+		color: $color9;
+		font-family: 'DS Eraser Cyr';
+		font-size: 1.8rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 168px;
+		width: 168px;
+
+		&:hover{
+			background-color: $color4;
+			color: $color2;
+			text-decoration: none;	
+		}
+	}
+}
+
+/* =/services
+---------------------------*/

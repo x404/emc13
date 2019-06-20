@@ -3660,7 +3660,7 @@ em strong {
   .tdu:hover {
     text-decoration: none; }
 
-.before, .topline:before, .homepage .header .nav li:before, .homepage .header .icon:after, .works:before, .works:after, .works__link:before {
+.before, .topline:before, .homepage .header .nav li:before, .homepage .header .icon:after, .homepage .works:before, .homepage .works:after, .works__link:before {
   content: "";
   display: block;
   position: absolute; }
@@ -3710,6 +3710,17 @@ section {
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0); }
+
+.slick-arrow {
+  background: none;
+  border: none;
+  color: #808080;
+  cursor: pointer;
+  font-family: 'DS Eraser Cyr';
+  font-size: 2.4rem;
+  padding: 0; }
+  .slick-arrow:hover {
+    color: #2f4f8e; }
 
 @font-face {
   font-family: 'DS Eraser Cyr';
@@ -3958,6 +3969,31 @@ section {
         border-bottom-color: rgba(255, 255, 255, 0);
         text-decoration: none; }
 
+.homepage .works {
+  background-color: #d9d9d9;
+  margin: 8rem 0 9rem;
+  position: relative; }
+  .homepage .works .container {
+    margin-top: -3.5rem;
+    z-index: 3;
+    position: relative; }
+  .homepage .works:before, .homepage .works:after {
+    background-size: cover !important;
+    width: 100%; }
+  .homepage .works:before {
+    background: url(../images/work-top.png) no-repeat;
+    top: -185px;
+    height: 216px; }
+  .homepage .works:after {
+    background: url(../images/work-bottom.png) no-repeat;
+    bottom: -190px;
+    height: 195px; }
+
+.homepage .services .carousel {
+  padding-top: 1rem; }
+
+/* =advantage
+---------------------------*/
 .advantage {
   position: relative;
   z-index: 2; }
@@ -3983,44 +4019,75 @@ section {
     .advantage__text p {
       line-height: 1.25; }
 
-.works {
-  background-color: #d9d9d9;
-  margin: 8rem 0 16rem;
-  position: relative; }
-  .works .container {
-    margin-top: -3.5rem;
-    z-index: 3;
-    position: relative; }
-  .works:before, .works:after {
-    background-size: cover !important;
-    width: 100%; }
-  .works:before {
-    background: url(../images/work-top.png) no-repeat;
-    top: -185px;
-    height: 216px; }
-  .works:after {
-    background: url(../images/work-bottom.png) no-repeat;
-    bottom: -190px;
-    height: 195px; }
-  .works [class*=grid-] {
-    grid-row-gap: 23px; }
-  .works__list {
-    margin: 3.7rem 0 1rem; }
-  .works__link {
-    display: inline-block;
-    position: relative; }
-    .works__link:before {
-      border-radius: 15px;
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      top: 0;
-      transition: opacity .3s;
-      width: 100%;
-      background: #2f4f8e; }
-    .works__link:hover:before {
-      opacity: .5; }
+/* =/advantage
+---------------------------*/
+/* =works
+---------------------------*/
+.works [class*=grid-] {
+  grid-row-gap: 23px; }
 
+.works__list {
+  margin: 3.7rem 0 1rem; }
+
+.works__link {
+  display: inline-block;
+  position: relative; }
+  .works__link:before {
+    border-radius: 15px;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    top: 0;
+    transition: opacity .3s;
+    width: 100%;
+    background: #2f4f8e; }
+  .works__link:hover:before {
+    opacity: .5; }
+
+/* =/works
+---------------------------*/
+/* =services
+---------------------------*/
+#services-carousel .slick-prev, #services-carousel .slick-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  transition: .3s; }
+
+#services-carousel .slick-prev {
+  left: -50px; }
+  #services-carousel .slick-prev:hover {
+    left: -55px; }
+
+#services-carousel .slick-next {
+  right: -50px; }
+  #services-carousel .slick-next:hover {
+    right: -55px; }
+
+.carousel {
+  padding-left: 5.5rem;
+  padding-right: 5.5rem; }
+
+.item-services {
+  width: 168px; }
+  .item-services__link {
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    color: #a6a6a6;
+    font-family: 'DS Eraser Cyr';
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 168px;
+    width: 168px; }
+    .item-services__link:hover {
+      background-color: #808080;
+      color: #fff;
+      text-decoration: none; }
+
+/* =/services
+---------------------------*/
 /* =mobile-menu
 ---------------------------*/
 .show-sm,
