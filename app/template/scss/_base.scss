@@ -590,3 +590,55 @@ section{
 }
 /* =bottom menu
 ---------------------------*/
+
+
+footer{
+	padding: .8rem 0;
+	a{
+		color: #3d4f59;
+		border-bottom: 1px dashed;
+		&:hover{
+			border-bottom-color: rgba(0,0,0,0);
+			color: #3d4f59;
+			text-decoration: none;
+		}
+	}
+
+	.creators{
+		text-align: right;
+	}
+}
+
+.social{	
+	a{
+		background-color: #ccc;
+		height: 29px;
+		width: 29px;
+		margin: 0 1px;
+		display: flex;
+		border: none !important;
+		img{
+			margin: auto;
+		}
+		&.fb{
+			&:hover{
+				background-color: #3f6cb5;				
+			}
+		}
+		&.tv{
+			&:hover{
+				background-color: #00acee;				
+			}
+		}
+		&.vk{
+			&:hover{
+				background-color: #45668e;				
+			}
+		}
+		&.rss{
+			&:hover{
+				background-color: #3f6cb5;				
+			}
+		}
+	}
+}

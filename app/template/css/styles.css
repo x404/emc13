@@ -3979,6 +3979,36 @@ section {
 
 /* =bottom menu
 ---------------------------*/
+footer {
+  padding: .8rem 0; }
+  footer a {
+    color: #3d4f59;
+    border-bottom: 1px dashed; }
+    footer a:hover {
+      border-bottom-color: rgba(0, 0, 0, 0);
+      color: #3d4f59;
+      text-decoration: none; }
+  footer .creators {
+    text-align: right; }
+
+.social a {
+  background-color: #ccc;
+  height: 29px;
+  width: 29px;
+  margin: 0 1px;
+  display: flex;
+  border: none !important; }
+  .social a img {
+    margin: auto; }
+  .social a.fb:hover {
+    background-color: #3f6cb5; }
+  .social a.tv:hover {
+    background-color: #00acee; }
+  .social a.vk:hover {
+    background-color: #45668e; }
+  .social a.rss:hover {
+    background-color: #3f6cb5; }
+
 @font-face {
   font-family: 'DS Eraser Cyr';
   src: local("DS Eraser Cyr"), url("../fonts/DS Eraser Cyr.woff") format("woff");
