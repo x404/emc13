@@ -31,28 +31,20 @@ $(document).ready(function(){
 		slidesToScroll: 1
 	});
 
-	// mobile-menu
-	$('#navbar').each(function(){
-		var $this = $(this),
-			$link = $('.navbar-toggle'),
-			$close = $('.close-menu'),
-
-			init = function(){
-				$link.on('click', openMenu);
-				$close.on('click', closeMenu);
-			},
-			openMenu = function(e){
-				e.preventDefault();
-				$('body').addClass('o-menu');
-
-			},
-			closeMenu = function(e){
-				e.preventDefault();
-				$('body').removeClass('o-menu');
-			};
-		init();
-	});	
 });
+
+
+$(function (){
+	// прячем кнопку #back-top
+	// при клике на ссылку плавно поднимаемся вверх
+	$("#back-top").click(function (){
+		$("body,html").animate({
+			scrollTop:0
+		}, 800);
+		return false;
+	});
+});
+
 
 
 $(function(){

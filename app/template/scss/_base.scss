@@ -151,6 +151,28 @@ em strong
 }
 
 
+.btn{
+	border: none;
+	cursor: pointer;
+	font-family: 'ucb';
+	font-size: 13px;
+	font-weight: normal;
+	padding: .2rem 2rem;
+	transition: .3s;
+	text-transform: uppercase;
+	border-radius: 5px;
+	&-gray{
+		background-color: #bfbfbf;
+		color: $color2;
+	}
+	&-hover-blue{
+		&:hover{
+			background-color: $color12;
+			color: $color2;			
+		}
+	}
+}
+
 .before{
 	content: "";
 	display: block;
@@ -553,6 +575,18 @@ section{
 			text-decoration: none;
 		}
 	}
+
+	#back-top{
+		height: 25px;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: -33px;
+		width: 128px;
+		z-index: 50;
+	}
+
+
 }
 /* =bottom menu
 ---------------------------*/

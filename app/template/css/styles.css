@@ -333,6 +333,12 @@ template {
   font-style: italic;
   font-weight: bold; }
 
+@font-face {
+  font-family: 'ucb';
+  src: url("../fonts/univers_condensed_bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 *,
 *::before,
 *::after {
@@ -3660,6 +3666,23 @@ em strong {
   .tdu:hover {
     text-decoration: none; }
 
+.btn {
+  border: none;
+  cursor: pointer;
+  font-family: 'ucb';
+  font-size: 13px;
+  font-weight: normal;
+  padding: .2rem 2rem;
+  transition: .3s;
+  text-transform: uppercase;
+  border-radius: 5px; }
+  .btn-gray {
+    background-color: #bfbfbf;
+    color: #fff; }
+  .btn-hover-blue:hover {
+    background-color: #3f6cb5;
+    color: #fff; }
+
 .before, .topline:before, .share:before, .bottom__menu:before, .bottom__menu .menu-1 .menu-item-4:before, .bottom__menu .menu-2 li:before, .bottom__menu .menu-3 li:before, .bottom__menu .menu-4 li:before, .bottom__menu .menu-5 li:before, .homepage .header .nav li:before, .homepage .header .icon:after, .homepage .works:before, .homepage .works:after, .works__link:before, #news-carousel .slick-slide a:after {
   content: "";
   display: block;
@@ -3945,6 +3968,14 @@ section {
     .bottom__menu li a:hover {
       border-bottom-color: #fff;
       text-decoration: none; }
+  .bottom__menu #back-top {
+    height: 25px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -33px;
+    width: 128px;
+    z-index: 50; }
 
 /* =bottom menu
 ---------------------------*/
@@ -3983,6 +4014,12 @@ section {
   src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.woff") format("woff"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.ttf") format("truetype");
   font-style: italic;
   font-weight: bold; }
+
+@font-face {
+  font-family: 'ucb';
+  src: url("../fonts/univers_condensed_bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
 .webp .homepage .header {
   background-image: url(../images/bg/header-bg.webp); }
