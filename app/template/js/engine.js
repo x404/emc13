@@ -60,3 +60,44 @@ $(function(){
 		}
 	})
 });
+
+
+
+// sticky header
+var fh = document.querySelector('.fixed-header')
+	// headerh = document.querySelector('.header').offsetHeight,
+	// fnavbar = document.querySelector('.fixed-navbar');
+
+window.onscroll = function(){
+	if (window.pageYOffset  > 1100 ) {
+		fh.classList.add('sticky');
+
+	} else {
+		if (window.pageYOffset  < 1300) {
+			fh.classList.remove('sticky');
+
+		}
+	}
+
+	if (window.pageYOffset > 850 ) {
+		try{
+			fnavbar.classList.add('sticky');
+		} catch(e){};
+	} else {
+		try{
+			fnavbar.classList.remove('sticky');
+		} catch(e){};
+	}
+
+	// var y = window.scrollY;
+	// if (y > 0){
+	// 	try{
+	// 		document.querySelector('.mobilepagedown').classList.add('hide')			
+	// 	} catch(e){}
+	// } else{
+	// 	try{
+	// 		document.querySelector('.mobilepagedown').classList.remove('hide')
+	// 	} catch(e){}
+	// }
+
+};

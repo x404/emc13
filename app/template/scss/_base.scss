@@ -171,6 +171,17 @@ em strong
 			color: $color2;			
 		}
 	}
+
+	&-inline{
+		background: none;
+		padding: 0;
+		border: none;
+		border-bottom: 1px dashed;
+		cursor: pointer;
+		&:hover{
+			border-bottom-color: rgba(255,255,255,0);
+		}
+	}
 }
 
 .before{
@@ -222,6 +233,74 @@ section{
 	}
 }
 
+
+
+.webp .fixed-header{
+	background-image: url(../images/bg/fixed-header-bg.webp);
+}
+
+
+.link-hover-dashed{
+	border-bottom-style: none;
+	&:hover{
+		border-bottom-style: dashed;
+		text-decoration: none;
+	}
+}
+
+.fixed-header{
+	background-image: url(../images/bg/fixed-header-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	left: 0;
+	position: fixed;
+	// top: -110px;
+	top: 0;
+	width: 100%;
+	transition: transform .6s;
+	transform: translateY(-140%);
+	&.sticky{
+		transform: translateY(0);
+		z-index: 50;
+	}
+	&-body{
+		height: 110px;		
+	}
+
+	.nav{
+		a{
+			border-bottom-width: 1px;
+			color: $color2;
+			font-size: 1.9rem;
+			font-style: italic;
+			font-weight: bold;
+			margin: 0 1.5rem;
+			@extend .link-hover-dashed;
+			&:hover{
+			}
+		}
+	}
+
+	.contacts{
+		.tel{
+			&:hover{
+				text-decoration: none;
+			}
+		} 
+		.btn-inline{
+			font-style: italic;
+			font-size: 1.8rem;
+			color: $color2;
+		}
+	}
+
+	.tel{
+		color: $color2;
+		font-size: 2.2rem;
+		font-weight: bold;
+		font-style: italic;
+	}
+}
 /* =main
 ---------------------------*/
 .tab-content {
