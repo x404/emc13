@@ -4,13 +4,21 @@
 	}
 }
 
-main{
-	h1{
+
+.inner h1.title,
+main h1
+{
 		color: $color4;
 		font-size: 3rem;
 		font-style: normal;
 		margin-bottom: 2.5rem;
-		text-align: center;
+		text-align: center;		
+}
+
+
+main{
+	h1{
+
 	}
 
 	p{
