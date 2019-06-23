@@ -117,7 +117,7 @@
 				</div>
 				<div class="contacts text-center">
 					<a href="tel:+74955543210" class="tel">+7 (495) 554-32-10</a> <br>
-					<button type="button" class="btn-inline">перезвонить?</button>
+					<button type="button" class="btn-inline" data-toggle="mymodal" data-target="#callback">перезвонить?</button>
 				</div>
 			</div>
 		</div>
@@ -533,6 +533,30 @@
 </div>
 
 <div id="outdated"></div>
+
+<div id="callback">
+	<div class="container">
+		<form action="#" method="post" id="callback-form" class="form-policy">
+			<fieldset>
+				<label for="name" class="vissualy-hidden"></label>
+				<input id="name" type="text" class="form-control" placeholder="как вас зовут ?" value="" />
+
+				<label for="tel" class="vissualy-hidden"></label>
+				<input id="tel" type="tel" class="form-control tel" value="" />			
+
+				<input type="submit" class="btn-submit" value="отправить" />
+
+				<div class="policy">
+					<input type="checkbox" id="fbcheckbox1" value="" name="checkbox" checked="checked" class="user-access" tabindex="4" />
+					<label for="fbcheckbox1">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" class="link-dashed" target="_blank">Пользовательского соглашения</a></label>
+				</div>
+			</fieldset>
+		</form>
+		<button class="close" type="button">х</button>
+	</div>
+</div>
+
+
 <script type="text/javascript" src="/template/js/slick.min.js"></script>
 <script src="/template/js/engine.js"></script>
 <script src="//yastatic.net/share2/share.js"></script>

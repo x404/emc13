@@ -179,7 +179,7 @@ em strong
 		border-bottom: 1px dashed;
 		cursor: pointer;
 		&:hover{
-			border-bottom-color: rgba(255,255,255,0);
+			border-bottom-color: rgba(255,255,255,0) !important;
 		}
 	}
 }
@@ -240,13 +240,24 @@ section{
 }
 
 
-.link-hover-dashed{
-	border-bottom-style: none;
+.link-dashed{
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
 	&:hover{
-		border-bottom-style: dashed;
+		border-bottom-color: rgba(0,0,0,0);
 		text-decoration: none;
 	}
 }
+
+.link-nodashed{
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: rgba(0,0,0,0);
+	&:hover{
+		text-decoration: none;
+	}
+}
+
 
 .fixed-header{
 	background-image: url(../images/bg/fixed-header-bg.jpg);
@@ -275,7 +286,7 @@ section{
 			font-style: italic;
 			font-weight: bold;
 			margin: 0 1.5rem;
-			@extend .link-hover-dashed;
+			@extend .link-dashed;
 			&:hover{
 			}
 		}
@@ -720,4 +731,178 @@ footer{
 			}
 		}
 	}
+}
+
+
+.transparent-overlay{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	// background-color: rgba(0,0,0,.5)
+}
+
+
+
+.wepb{
+	#callback{
+		&-form{
+			background-image: url(../images/bg/shape.webp);
+
+		}
+	}
+}
+
+.form-control{
+	font-family: "Segoe UI";
+	font-style: italic;
+	text-align: center;
+}
+
+#callback{
+	background-color: #000;
+	display: flex;
+	height: 100vh;
+	left: 0;
+	min-height: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	.container{
+		display: flex;
+		position: relative;
+		height: 100%;
+	}
+
+	&-form{
+		align-items: center;
+		background-image: url(../images/bg/shape.png);
+		background-position: left top;
+		background-repeat: no-repeat;
+		display: flex;
+		height: 692px;
+		justify-content: center;
+		margin: auto;
+		width: 1069px;
+		fieldset{
+			margin-top: -45px;
+		}
+	}
+	.close{
+		font-family: 'DS Eraser Cyr';
+		cursor: pointer;
+		background: none;
+		border: none;
+		padding: 0;
+		font-size: 3rem;
+		color: $color2;
+		position: absolute;
+		right: 165px;
+		top: 50%;
+		margin-top: -275px;
+	}
+
+	.form-control{
+		$h: 4rem;
+		height: $h;
+		border-radius: $h;
+		border: none;
+		width: 728px;
+		display: block;
+		margin: 2.4rem 0;
+	}
+
+	.btn-submit{
+		background: #fff;
+		border-radius: 4rem;
+		border: none;
+		display: block;
+		font-family: "Segoe UI";
+		font-style: italic;
+		height: 4rem;
+		margin: 0 auto;
+		padding: 0;
+		width: 14rem;
+	}
+
+
+	.policy{
+		margin-top: 2.9rem;
+		padding-left: 1.2rem;
+		a{
+			color: $color2;
+			&:hover{
+			}
+		}
+	}
+
+
+	.user-access:not(checked) + label:before {
+		background-color: $color2;
+		border-color: $color2;
+	}
+
+	.user-access:checked + label:after {
+		color: $color1;
+	}
+}
+
+
+
+.vissualy-hidden{
+	position: absolute;
+}
+
+input[type="submit"]{
+	cursor: pointer;
+}
+
+
+
+.user-access + label {
+  cursor: pointer;
+  color: $color3;
+}
+
+.user-access:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.user-access:not(checked) + label {
+  display: block;
+  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.user-access:not(checked) + label:before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 46px;
+	height: 30px;
+	border: 1px solid $color4;
+	background-color: $color4;
+  	border-radius: 30px;
+}
+
+/* Меняем фон чекбокса, когда он включен. */
+.user-access:checked + label:before {
+	border-color: $color4;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.user-access:checked + label:after {
+	border-radius: 3px;
+	color: $color2;
+	content: '*';
+	font-size: 3rem;
+	font-style: normal;
+	height: 22px;
+	left: 17px;
+	line-height: 1;
+	position: absolute;
+	top: 1px;
+	width: 22px;
 }

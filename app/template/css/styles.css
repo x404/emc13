@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -3689,7 +3690,7 @@ em strong {
     border-bottom: 1px dashed;
     cursor: pointer; }
     .btn-inline:hover {
-      border-bottom-color: rgba(255, 255, 255, 0); }
+      border-bottom-color: rgba(255, 255, 255, 0) !important; }
 
 .before, .topline:before, .share:before, .bottom__menu:before, .bottom__menu .menu-1 .menu-item-4:before, .bottom__menu .menu-2 li:before, .bottom__menu .menu-3 li:before, .bottom__menu .menu-4 li:before, .bottom__menu .menu-5 li:before, .homepage .header .nav li:before, .homepage .header .icon:after, .homepage .works:before, .homepage .works:after, .works__link:before, #news-carousel .slick-slide a:after {
   content: "";
@@ -3730,10 +3731,18 @@ section {
 .webp .fixed-header {
   background-image: url(../images/bg/fixed-header-bg.webp); }
 
-.link-hover-dashed, .fixed-header .nav a {
-  border-bottom-style: none; }
-  .link-hover-dashed:hover, .fixed-header .nav a:hover {
-    border-bottom-style: dashed;
+.link-dashed, .fixed-header .nav a {
+  border-bottom-width: 1px;
+  border-bottom-style: dashed; }
+  .link-dashed:hover, .fixed-header .nav a:hover {
+    border-bottom-color: rgba(0, 0, 0, 0);
+    text-decoration: none; }
+
+.link-nodashed {
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: rgba(0, 0, 0, 0); }
+  .link-nodashed:hover {
     text-decoration: none; }
 
 .fixed-header {
@@ -4059,6 +4068,139 @@ footer {
     background-color: #45668e; }
   .social a.rss:hover {
     background-color: #3f6cb5; }
+
+.transparent-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0; }
+
+.wepb #callback-form {
+  background-image: url(../images/bg/shape.webp); }
+
+.form-control {
+  font-family: "Segoe UI";
+  font-style: italic;
+  text-align: center; }
+
+#callback {
+  background-color: #000;
+  display: flex;
+  height: 100vh;
+  left: 0;
+  min-height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100; }
+  #callback .container {
+    display: flex;
+    position: relative;
+    height: 100%; }
+  #callback-form {
+    align-items: center;
+    background-image: url(../images/bg/shape.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 692px;
+    justify-content: center;
+    margin: auto;
+    width: 1069px; }
+    #callback-form fieldset {
+      margin-top: -45px; }
+  #callback .close {
+    font-family: 'DS Eraser Cyr';
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 3rem;
+    color: #fff;
+    position: absolute;
+    right: 165px;
+    top: 50%;
+    margin-top: -275px; }
+  #callback .form-control {
+    height: 4rem;
+    border-radius: 4rem;
+    border: none;
+    width: 728px;
+    display: block;
+    margin: 2.4rem 0; }
+  #callback .btn-submit {
+    background: #fff;
+    border-radius: 4rem;
+    border: none;
+    display: block;
+    font-family: "Segoe UI";
+    font-style: italic;
+    height: 4rem;
+    margin: 0 auto;
+    padding: 0;
+    width: 14rem; }
+  #callback .policy {
+    margin-top: 2.9rem;
+    padding-left: 1.2rem; }
+    #callback .policy a {
+      color: #fff; }
+  #callback .user-access:not(checked) + label:before {
+    background-color: #fff;
+    border-color: #fff; }
+  #callback .user-access:checked + label:after {
+    color: #000; }
+
+.vissualy-hidden {
+  position: absolute; }
+
+input[type="submit"] {
+  cursor: pointer; }
+
+.user-access + label {
+  cursor: pointer;
+  color: #ebeeef; }
+
+.user-access:not(checked) {
+  position: absolute;
+  opacity: 0; }
+
+.user-access:not(checked) + label {
+  display: block;
+  position: relative;
+  /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 60px;
+  /* оставляем слева от label место под псевдочекбокс */ }
+
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.user-access:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 46px;
+  height: 30px;
+  border: 1px solid #808080;
+  background-color: #808080;
+  border-radius: 30px; }
+
+/* Меняем фон чекбокса, когда он включен. */
+.user-access:checked + label:before {
+  border-color: #808080; }
+
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.user-access:checked + label:after {
+  border-radius: 3px;
+  color: #fff;
+  content: '*';
+  font-size: 3rem;
+  font-style: normal;
+  height: 22px;
+  left: 17px;
+  line-height: 1;
+  position: absolute;
+  top: 1px;
+  width: 22px; }
 
 @font-face {
   font-family: 'DS Eraser Cyr';
