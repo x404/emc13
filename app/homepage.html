@@ -536,28 +536,34 @@
 
 <div id="callback">
 	<div class="container">
-		<form action="#" method="post" id="callback-form" class="form-policy">
-			<fieldset>
-				<label for="name" class="vissualy-hidden"></label>
-				<input id="name" type="text" class="form-control" placeholder="как вас зовут ?" value="" />
+		<div class="body">
+			<form action="#" method="post" id="callback-form" class="form-policy">
+				<fieldset>
+					<label for="name" class="vissualy-hidden"></label>
+					<input id="name" type="text" name="name" class="form-control required" placeholder="как вас зовут ?" value="" />
 
-				<label for="tel" class="vissualy-hidden"></label>
-				<input id="tel" type="tel" class="form-control tel" value="" />			
+					<label for="tel" class="vissualy-hidden"></label>
+					<input id="tel" type="tel" name="tel" class="form-control tel" placeholder="телефон" value="" />
 
-				<input type="submit" class="btn-submit" value="отправить" />
+					<input type="submit" class="btn-submit" value="отправить" />
 
-				<div class="policy">
-					<input type="checkbox" id="fbcheckbox1" value="" name="checkbox" checked="checked" class="user-access" tabindex="4" />
-					<label for="fbcheckbox1">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" class="link-dashed" target="_blank">Пользовательского соглашения</a></label>
-				</div>
-			</fieldset>
-		</form>
-		<button class="close" type="button">х</button>
+					<div class="policy">
+						<input type="checkbox" id="fbcheckbox1" value="" name="checkbox" checked="checked" class="user-access" tabindex="4" />
+						<label for="fbcheckbox1">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" class="link-dashed" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+			<button class="close" type="button">х</button>
+		</div>
 	</div>
 </div>
 
 
-<script type="text/javascript" src="/template/js/slick.min.js"></script>
+<script src="/template/js/slick.min.js"></script>
+<script src="/template/js/inputmask/inputmask.js"></script>
+<script src="/template/js/inputmask/inputmask.phone.extensions.js"></script>
+<script src="/template/js/inputmask/jquery.inputmask.js"></script>
+
 <script src="/template/js/engine.js"></script>
 <script src="//yastatic.net/share2/share.js"></script>
 </body>

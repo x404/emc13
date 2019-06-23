@@ -4086,18 +4086,27 @@ footer {
 
 #callback {
   background-color: #000;
-  display: flex;
   height: 100vh;
   left: 0;
   min-height: 100%;
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 100; }
+  display: flex;
+  opacity: 0;
+  transition: opacity .3s; }
+  #callback.show {
+    opacity: 1;
+    z-index: 100; }
   #callback .container {
     display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center; }
+  #callback .body {
+    display: flex;
     position: relative;
-    height: 100%; }
+    height: 692px; }
   #callback-form {
     align-items: center;
     background-image: url(../images/bg/shape.png);
@@ -4111,24 +4120,24 @@ footer {
     #callback-form fieldset {
       margin-top: -45px; }
   #callback .close {
-    font-family: 'DS Eraser Cyr';
-    cursor: pointer;
     background: none;
     border: none;
-    padding: 0;
-    font-size: 3rem;
     color: #fff;
+    cursor: pointer;
+    font-family: 'DS Eraser Cyr';
+    font-size: 3rem;
+    padding: 0;
     position: absolute;
-    right: 165px;
-    top: 50%;
-    margin-top: -275px; }
+    right: 95px;
+    top: 80px; }
   #callback .form-control {
-    height: 4rem;
     border-radius: 4rem;
-    border: none;
-    width: 728px;
+    border: 1px solid;
     display: block;
-    margin: 2.4rem 0; }
+    font-size: 1.5rem;
+    height: 4rem;
+    margin: 2.4rem 0;
+    width: 728px; }
   #callback .btn-submit {
     background: #fff;
     border-radius: 4rem;
@@ -4140,6 +4149,10 @@ footer {
     margin: 0 auto;
     padding: 0;
     width: 14rem; }
+  #callback .sending,
+  #callback .thank {
+    color: #fff;
+    font-size: 1.8rem; }
   #callback .policy {
     margin-top: 2.9rem;
     padding-left: 1.2rem; }
@@ -4201,6 +4214,12 @@ input[type="submit"] {
   position: absolute;
   top: 1px;
   width: 22px; }
+
+.form-control.error {
+  border-color: red !important; }
+
+label.error {
+  display: none !important; }
 
 @font-face {
   font-family: 'DS Eraser Cyr';

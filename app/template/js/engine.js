@@ -1,3 +1,9 @@
+var thankcallback = '<div class="thank text-center"><p>Форма отправлена!</p><p>В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей</p></div>';
+var thankfaq = '<div class="thank text-center"><p>Ваш вопрос отправлен</p></div>';
+var thankreview = '<div class="thank text-center"><p>Ваш отзыв отправлен</p></div>';
+var errorTxt = 'Форма не отправлена. Попробуйте позже.';
+
+
 $(document).ready(function(){
 
 	$('#services-carousel').slick({
@@ -30,6 +36,51 @@ $(document).ready(function(){
 		arrows: true,
 		slidesToScroll: 1
 	});
+
+
+	// mask
+	$('input.tel').inputmask({
+		mask: '+7(999)999-99-99',
+		showMaskOnHover : false
+	});
+	// #mask
+
+	// validate
+	$.validator.addMethod("validphone", function(value){
+		if (Inputmask.isValid(value, { mask: '+7(999)999-99-99'})) return true
+		else return false;
+	},"");
+		
+	// clear forms
+	$('.form').find('.form-control').val('');
+
+
+	$('#callback-form').validate({
+		rules: {
+			name:{
+				required : true
+			},
+			tel: {
+				validphone:true
+			}
+		},
+		// errorPlacement: function(error, element) {
+		// 	if (element.attr('name') == 'name') {
+		// 		$('#callback-form .helper-field-name').text('Заполните поле');
+		// 		$('#callback-form .helper-field-name').addClass('error')
+		// 	}
+
+		// 	if (element.attr('name') == 'tel'){
+		// 		$('#callback-form .helper-field-tel').text('Заполните поле');
+		// 		$('#callback-form .helper-field-tel').addClass('error')
+		// 	}
+		// },
+		submitHandler:function(form) {
+			let strSubmit= $(form).serialize(),
+				url = $(form).attr('action');
+			sendform(url, strSubmit, form);
+		}
+	});	
 
 });
 
@@ -67,27 +118,19 @@ $(function(){
 var fh = document.querySelector('.fixed-header')
 	// headerh = document.querySelector('.header').offsetHeight,
 	// fnavbar = document.querySelector('.fixed-navbar');
-
+	stickynav();
 window.onscroll = function(){
-	if (window.pageYOffset  > 1100 ) {
-		fh.classList.add('sticky');
+	stickynav()
 
-	} else {
-		if (window.pageYOffset  < 1300) {
-			fh.classList.remove('sticky');
-
-		}
-	}
-
-	if (window.pageYOffset > 850 ) {
-		try{
-			fnavbar.classList.add('sticky');
-		} catch(e){};
-	} else {
-		try{
-			fnavbar.classList.remove('sticky');
-		} catch(e){};
-	}
+	// if (window.pageYOffset > 850 ) {
+	// 	try{
+	// 		fnavbar.classList.add('sticky');
+	// 	} catch(e){};
+	// } else {
+	// 	try{
+	// 		fnavbar.classList.remove('sticky');
+	// 	} catch(e){};
+	// }
 
 	// var y = window.scrollY;
 	// if (y > 0){
@@ -101,7 +144,16 @@ window.onscroll = function(){
 	// }
 };
 
+function stickynav(){
+	if (window.pageYOffset  > 1100 ) {
+		fh.classList.add('sticky');
 
+	} else {
+		if (window.pageYOffset  < 1300) {
+			fh.classList.remove('sticky');
+		}
+	}
+}
 
 
 window.onload = function(){
@@ -130,6 +182,10 @@ class Popup{
 		document.querySelector('.transparent-overlay').addEventListener('click', function(){
 			modal.close();
 		});
+			
+		document.querySelector('#callback .close').addEventListener('click', function(){
+			modal.close();
+		});
 
 		// GENERAL EVENT - ONKEYDOWN
 		document.onkeydown = function(evt) {
@@ -145,7 +201,7 @@ class Popup{
 		    }
 		};
 		// console.log(this.name);
-		
+
 		// show popup
 		document.querySelector(this.name).classList.add('show');
 	}
@@ -157,4 +213,93 @@ class Popup{
 		// remove active class
 		// document.querySelector('.cats .active').classList.remove('active')
 	}
+}
+
+
+var timer,
+	sec = 3;
+
+
+function showTime(sendform){
+	sec = sec-1;
+	if (sec <=0) {
+		stopClock();
+
+		modal = $('#' + sendform).closest('.modal');
+		modal.modal('hide');
+		setTimeout(function(){
+			modal.find('.thank').remove();
+			modal.find('.form-control, textarea').val('');
+			modal.find('fieldset').show();
+		}, 1000)
+
+
+		switch (sendform){
+			// case 'qorder-form':
+			// 	$('.qorder__box .thank').fadeOut('normal',function(){
+			// 		$('.qorder__box .thank').remove();
+			// 		$('.qorder__box .form-control, .qorder__box textarea').val('');
+			// 	});
+			// 	break;
+			// case 'general-form':
+			// 	$('#callback .thank').fadeOut('normal',function(){
+			// 		$('#callback .thank').remove();
+			// 		$('#callback .form-control, #callback textarea').val('');
+			// 		$('#callback fieldset').show();
+			// 	});
+			// 	break;
+			// case 'cart-form':
+			// 	$('.cart .thank').fadeOut('normal',function(){
+			// 		$('.cart .thank').remove();
+			// 		// $('.cart .form-control, .cart textarea').val('');
+			// 		// $('.cart__form fieldset').show();
+			// 	});
+			// 	break;	
+			default:
+
+				break;
+		}
+	}
+}
+
+function stopClock(){
+	window.clearInterval(timer);
+	timer = null;
+	sec = 3;
+}
+
+function startClock(sendform){
+	if (!timer)
+		timer = window.setInterval("showTime('" + sendform.attr('id') + "')",1000);
+}
+
+
+
+
+function sendform(url, strSubmit, form){
+	console.log($(form));
+	$(form).find('fieldset').hide();
+	$(form).append('<div class="sending">Идет отправка ...</div>');
+	
+	fetch(url, {
+		method: 'post',
+		headers: {
+	        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+		},
+		body: strSubmit 
+	})
+	.then(function(response){ 
+		if (response.status == '200'){
+			document.querySelector('.sending').remove();
+			$(form).append(thankcallback);
+			startClock($(form));
+		} else{
+			alert(errorTxt);
+			$(form).find('fieldset').show();
+			$('.sending').remove();	
+		}
+	})
+	.catch (function (error) {
+	    console.log('Request failed', error);
+	});
 }
