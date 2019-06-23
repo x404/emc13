@@ -562,5 +562,27 @@
 
 <script src="/template/js/engine.js"></script>
 <script src="//yastatic.net/share2/share.js"></script>
+
+<script>
+	// sticky header
+	var body = document.querySelector('body');
+		stickynav();
+
+
+	window.onscroll = function(){
+		stickynav()
+	};
+
+	function stickynav(){
+		if (window.pageYOffset  > 1100 ) {
+			body.classList.add('sticky');
+
+		} else {
+			if (window.pageYOffset  < 1300) {
+				body.classList.remove('sticky');
+			}
+		}
+	}
+</script>
 </body>
 </html>

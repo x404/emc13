@@ -40,7 +40,7 @@
 		<div class="container">
 			<div class="fixed-header-body d-flex justify-content-between align-items-center">
 				<div class="logo">
-					<img src="/template/images/logo2.png" alt="" />
+					<a href="/" title="" aria-label="На главную"><img src="/template/images/logo2.png" alt="" /></a>
 				</div>
 				<div class="nav">
 					<ul class="d-flex">
@@ -62,8 +62,12 @@
 
 	<!-- =main -->
 	<div class="main">
-		<!-- TemplateBeginEditable name="EditRegion3" -->
-		<!-- TemplateEndEditable -->	
+		<div class="container">
+			<!-- TemplateBeginEditable name="EditRegion3" -->
+			<main></main>
+			<h1></h1>
+			<!-- TemplateEndEditable -->
+		</div>
 	</div>
 	<!-- =/main -->
 
