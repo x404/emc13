@@ -277,7 +277,6 @@ function startClock(sendform){
 
 
 function sendform(url, strSubmit, form){
-	console.log($(form));
 	$(form).find('fieldset').hide();
 	$(form).append('<div class="sending">Идет отправка ...</div>');
 	
@@ -292,7 +291,7 @@ function sendform(url, strSubmit, form){
 		if (response.status == '200'){
 			document.querySelector('.sending').remove();
 			$(form).append(thankcallback);
-			startClock($(form));
+			// startClock($(form));
 		} else{
 			alert(errorTxt);
 			$(form).find('fieldset').show();
