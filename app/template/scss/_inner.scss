@@ -16,7 +16,64 @@
 }
 
 
+#carousel,
+#carousel2
+{
+	display: flex;
+	&.slick-initialized{
+		display: block;
+	}
+
+	img{
+		border-radius: 15px;
+	}
+
+	a{
+		display: block;
+		width: 112px;
+		position: relative;
+		border-bottom: none;
+		&:before,
+		&:after{
+			@extend .before;
+			opacity: 0;
+			transition: .3s;
+		}
+
+		&:before{
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #2f4f8e;
+			border-radius: 15px;
+		}
+
+		&:after{
+			background: url(../images/zoom.png) no-repeat;
+			height: 35px;
+			left: 50%;
+			margin-left: -17px;
+			margin-top: -17px;
+			top: 50%;
+			width: 35px;
+			transform: scale(0.3);
+		}
+
+		&:hover{
+			&:before{
+				opacity: .5;
+			}
+			&:after{
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+}
+
 main{
+	color: #000;
 	h1{
 
 	}
@@ -82,6 +139,10 @@ main{
 				width: 20px;
 			}
 		}
+	}
+
+	.carousel{
+		margin: 3rem 0;
 	}
 }
 

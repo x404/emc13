@@ -3716,7 +3716,9 @@ a.btn {
 main h1:after,
 .news h1:after,
 .actions h1:after,
-.bottomline:after, .top-longline:before, .bottom-longline:after, .share:before, .bottom__menu:before, .bottom__menu .menu-1 .menu-item-4:before, .bottom__menu .menu-2 li:before, .bottom__menu .menu-3 li:before, .bottom__menu .menu-4 li:before, .bottom__menu .menu-5 li:before, .homepage .header .nav li:before, .homepage .header .icon:after, .homepage .works:before, .homepage .works:after, .works__link:before, #news-carousel .slick-slide a:after, main ul li:before, .item-news__pic a:before, .item-actions__pic a:before {
+.bottomline:after, .top-longline:before, .bottom-longline:after, .share:before, .bottom__menu:before, .bottom__menu .menu-1 .menu-item-4:before, .bottom__menu .menu-2 li:before, .bottom__menu .menu-3 li:before, .bottom__menu .menu-4 li:before, .bottom__menu .menu-5 li:before, .homepage .header .nav li:before, .homepage .header .icon:after, .homepage .works:before, .homepage .works:after, .works__link:before, #news-carousel .slick-slide a:after, #carousel a:before, #carousel a:after,
+#carousel2 a:before,
+#carousel2 a:after, main ul li:before, .item-news__pic a:before, .item-actions__pic a:before {
   content: "";
   display: block;
   position: absolute; }
@@ -4635,36 +4637,52 @@ label.error {
 ---------------------------*/
 #services-carousel,
 #clients-carousel,
-#news-carousel {
+#news-carousel,
+#carousel,
+#carouse2 {
   display: flex; }
   #services-carousel.slick-initialized,
   #clients-carousel.slick-initialized,
-  #news-carousel.slick-initialized {
+  #news-carousel.slick-initialized,
+  #carousel.slick-initialized,
+  #carouse2.slick-initialized {
     display: block; }
   #services-carousel .slick-prev, #services-carousel .slick-next,
   #clients-carousel .slick-prev,
   #clients-carousel .slick-next,
   #news-carousel .slick-prev,
-  #news-carousel .slick-next {
+  #news-carousel .slick-next,
+  #carousel .slick-prev,
+  #carousel .slick-next,
+  #carouse2 .slick-prev,
+  #carouse2 .slick-next {
     position: absolute;
     top: 50%;
     margin-top: -16px;
     transition: .3s; }
   #services-carousel .slick-prev,
   #clients-carousel .slick-prev,
-  #news-carousel .slick-prev {
+  #news-carousel .slick-prev,
+  #carousel .slick-prev,
+  #carouse2 .slick-prev {
     left: -50px; }
     #services-carousel .slick-prev:hover,
     #clients-carousel .slick-prev:hover,
-    #news-carousel .slick-prev:hover {
+    #news-carousel .slick-prev:hover,
+    #carousel .slick-prev:hover,
+    #carouse2 .slick-prev:hover {
       left: -55px; }
   #services-carousel .slick-next,
   #clients-carousel .slick-next,
-  #news-carousel .slick-next {
+  #news-carousel .slick-next,
+  #carousel .slick-next,
+  #carouse2 .slick-next {
     right: -50px; }
     #services-carousel .slick-next:hover,
     #clients-carousel .slick-next:hover,
-    #news-carousel .slick-next:hover {
+    #news-carousel .slick-next:hover,
+    #carousel .slick-next:hover,
+    #carouse2 .slick-next:hover {
       right: -55px; }
 
 .carousel {
@@ -5018,56 +5036,101 @@ label.error {
   margin-bottom: 2.5rem;
   text-align: center; }
 
-main p {
-  line-height: 1.7;
-  margin: 1.8rem 0; }
-
-main a {
-  border-bottom: 1px dashed;
-  color: #3f6cb5; }
-  main a:hover {
-    border-bottom-color: rgba(255, 255, 255, 0);
-    text-decoration: none; }
-
-main b,
-main strong,
-main .bold {
-  font-weight: bold; }
-
-main em, main i,
-main .italic {
-  font-style: italic; }
-
-main ul {
-  list-style: none;
-  margin: 2rem 0;
-  padding: 0; }
-  main ul li {
-    margin: .3rem 0;
-    padding-left: 12px;
-    position: relative; }
-    main ul li:before {
-      content: "-";
+#carousel,
+#carousel2 {
+  display: flex; }
+  #carousel.slick-initialized,
+  #carousel2.slick-initialized {
+    display: block; }
+  #carousel img,
+  #carousel2 img {
+    border-radius: 15px; }
+  #carousel a,
+  #carousel2 a {
+    display: block;
+    width: 112px;
+    position: relative;
+    border-bottom: none; }
+    #carousel a:before, #carousel a:after,
+    #carousel2 a:before,
+    #carousel2 a:after {
+      opacity: 0;
+      transition: .3s; }
+    #carousel a:before,
+    #carousel2 a:before {
       left: 0;
-      top: -1px; }
-
-main ol {
-  counter-reset: li;
-  list-style: none;
-  margin: 2rem 0; }
-  main ol li {
-    margin: 1rem 0;
-    padding-left: 20px;
-    position: relative; }
-    main ol li:before {
-      color: #808080;
-      content: counter(li, decimal) ".";
-      counter-increment: li;
-      font-size: 14px;
-      left: 0;
-      position: absolute;
       top: 0;
-      width: 20px; }
+      right: 0;
+      bottom: 0;
+      background-color: #2f4f8e;
+      border-radius: 15px; }
+    #carousel a:after,
+    #carousel2 a:after {
+      background: url(../images/zoom.png) no-repeat;
+      height: 35px;
+      left: 50%;
+      margin-left: -17px;
+      margin-top: -17px;
+      top: 50%;
+      width: 35px;
+      transform: scale(0.3); }
+    #carousel a:hover:before,
+    #carousel2 a:hover:before {
+      opacity: .5; }
+    #carousel a:hover:after,
+    #carousel2 a:hover:after {
+      opacity: 1;
+      transform: scale(1); }
+
+main {
+  color: #000; }
+  main p {
+    line-height: 1.7;
+    margin: 1.8rem 0; }
+  main a {
+    border-bottom: 1px dashed;
+    color: #3f6cb5; }
+    main a:hover {
+      border-bottom-color: rgba(255, 255, 255, 0);
+      text-decoration: none; }
+  main b,
+  main strong,
+  main .bold {
+    font-weight: bold; }
+  main em, main i,
+  main .italic {
+    font-style: italic; }
+  main ul {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0; }
+    main ul li {
+      margin: .3rem 0;
+      padding-left: 12px;
+      position: relative; }
+      main ul li:before {
+        content: "-";
+        left: 0;
+        top: -1px; }
+  main ol {
+    counter-reset: li;
+    list-style: none;
+    margin: 2rem 0; }
+    main ol li {
+      margin: 1rem 0;
+      padding-left: 20px;
+      position: relative; }
+      main ol li:before {
+        color: #808080;
+        content: counter(li, decimal) ".";
+        counter-increment: li;
+        font-size: 14px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 20px; }
+  main .carousel {
+    margin: 3rem 0; }
 
 div.pagination {
   display: flex;

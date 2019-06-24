@@ -38,6 +38,23 @@ $(document).ready(function(){
 	});
 
 
+	$('#carousel').slick({
+		prevArrow:'<button class="slick-arrow slick-prev" aria-label="Назад" type="button"><-</button>',
+		nextArrow:'<button class="slick-arrow slick-next" aria-label="Вперед" type="button">-></button>',
+		slidesToShow: 8,
+		arrows: true,
+		slidesToScroll: 1
+	});
+
+	$('#carousel2').slick({
+		prevArrow:'<button class="slick-arrow slick-prev" aria-label="Назад" type="button"><-</button>',
+		nextArrow:'<button class="slick-arrow slick-next" aria-label="Вперед" type="button">-></button>',
+		slidesToShow: 6,
+		arrows: true,
+		slidesToScroll: 1
+	});
+
+
 	// mask
 	$('input.tel').inputmask({
 		mask: '+7(999)999-99-99',
