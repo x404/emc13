@@ -1,0 +1,84 @@
+.inner-actions{
+	.text{
+		padding-top: 1px;
+	}
+}
+// actions__list
+.actions{
+	padding-top: 0;
+	&__item{
+		margin: 1.8rem 0 3.1rem;
+	}
+	.actions__list{
+		margin-top: 1.5rem;
+	}
+}
+
+.item-actions{
+	&__pic{
+		$radius: 10px;
+		margin-top: 1rem;
+		img{
+			display: block;
+			border-radius: $radius;
+			max-width: 100%;
+			height: auto;
+		}
+		a{
+			display: block;
+			position: relative;
+			&:before{
+				@extend .before;
+				background: rgba(47,79,142,.5);
+				border-radius: $radius;
+				height: 112px;
+				left: 0;
+				top: 0;
+				opacity: 0;
+				width: 100%;
+				transition: opacity .3s;
+			}
+			&:hover{
+				&:before{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__desc{
+		padding-left: .8rem;
+	}
+	&__title{
+		color: $color5;
+		font-size: 1.4rem;
+		font-weight: bold;
+		line-height: 1.2;
+		margin-top: .8rem;
+		a{
+			@extend .link-dashed;
+			color: $color5;
+		}
+	}
+	&__text{
+		color: $color1;
+		line-height: 1.7;
+		margin: 1.5rem 0 1.2rem;
+	}
+
+	&__date{
+		color: $color6;
+		display: block;
+		margin-top: 2rem;
+	}
+
+	&__link{
+		border-bottom: 1px solid $color4;	
+		color: $color7;
+		display: inline-block;
+		&:hover{
+			border-bottom-color: rgba(255,255,255,0);
+			color: $color7;
+			text-decoration: none;
+		}
+	}
+}
