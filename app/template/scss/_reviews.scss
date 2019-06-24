@@ -1,0 +1,43 @@
+.reviews__list{
+	.item-reviews{
+		background-color: #e5e5e5;
+		margin-bottom: 3.2rem;
+		padding: 1.2rem .8rem 1.8rem;
+		&:last-child(){
+			margin-bottom: 0;
+		}
+	}
+} 
+.btn-addreview{
+	display: block;
+	font-style: italic;
+	margin-bottom: 3.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	width: 184px;
+	&:hover{
+		background-color: #a8a8a8;
+	}
+}
+
+.b-comment{
+	margin-top: 0;
+	padding-top: 1.5rem;
+}
+
+.ec-antispam
+{
+	display: none;
+}
+
+
+.comment__form{
+	h3{
+		// color: $color14;
+		// font-size: 3rem;
+		// font-style: normal;
+		// margin-bottom: 2.5rem;
+		// text-align: center;
+	}
+}

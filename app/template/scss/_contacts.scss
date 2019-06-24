@@ -11,7 +11,8 @@
 }
 
 
-.feedback{
+.b-comment,
+.feedback{ 
 	font-size: 1.5rem;
 	position: relative;
 	width: 92%;
@@ -28,45 +29,46 @@
 		height: 29.8rem;
 	}
 
-	&__title{
+	.title{
 		color: $color14;
 		margin-bottom: 1rem;
 		font-size: 3rem;
 		font-weight: bold;
 		font-style: normal;
+		text-align: center;
 	}
+}
 
-	&__form{
-		margin-top: 2.2rem;
-		.form-control{
-			@include placeholder(#000);
-			display: block;
-			width: 100%;
-			// background: $color10;
-			$h: 4rem;
-			border-radius: $h;
-			border: 1px solid $color9;
-			font-size: 1.5rem;
-			height: $h;
-			padding-left: 2.8rem;
-			padding-right: 2.8rem;
-			margin-bottom: 2.4rem;
-			&:disabled{
-				opacity: .8;
-			}
-		}
-
-		.form-control{
-			color: $color1;
-			text-align: left;
-		}
-		textarea.form-control{
-			border-radius: 1.8rem;
-			height: 9.4rem;
-			padding-top: .6rem;	
+.feedback__form,
+.ec-form{
+	margin-top: 2.2rem;
+	.form-control{
+		@include placeholder(#000);
+		display: block;
+		width: 100%;
+		// background: $color10;
+		$h: 4rem;
+		border-radius: $h;
+		border: 1px solid $color9;
+		font-size: 1.5rem;
+		height: $h;
+		padding-left: 2.8rem;
+		padding-right: 2.8rem;
+		margin-bottom: 2.4rem;
+		&:disabled{
+			opacity: .8;
 		}
 	}
 
+	.form-control{
+		color: $color1;
+		text-align: left;
+	}
+	textarea.form-control{
+		border-radius: 1.8rem;
+		height: 9.4rem;
+		padding-top: .6rem;	
+	}
 	.form-actions{
 		margin-bottom: 2rem;
 	}
@@ -74,6 +76,8 @@
 	.submit{
 		display: block;
 		height: 4rem;
+		font-size: 1.5rem;
+		font-style: italic;
 		margin: 0 auto;
 		padding: 0;
 		width: 14rem;
@@ -93,11 +97,10 @@
 		font-size: 1.4rem;
 		margin-bottom: 3.5rem;
 		.user-access+label{
-			color: $color13;			
+			color: $color13;
 		}
 		a{
 			color: $color5;
-
 		}
 	}
 	.user-access:not(checked)+label:before{

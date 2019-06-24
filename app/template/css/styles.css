@@ -4702,6 +4702,7 @@ label.error {
     margin: 0 .5rem; }
 
 .item-reviews__text {
+  color: #000;
   line-height: 1.7; }
 
 .news-actions {
@@ -5098,6 +5099,7 @@ main ol {
   height: 35rem;
   margin: 3rem 0; }
 
+.b-comment,
 .feedback {
   font-size: 1.5rem;
   position: relative;
@@ -5105,6 +5107,8 @@ main ol {
   margin: 3rem auto 0;
   padding-top: 0;
   color: #000; }
+  .b-comment .sending,
+  .b-comment .thank,
   .feedback .sending,
   .feedback .thank {
     display: flex;
@@ -5112,71 +5116,120 @@ main ol {
     flex-direction: column;
     justify-content: center;
     height: 29.8rem; }
-  .feedback__title {
+  .b-comment .title,
+  .feedback .title {
     color: #666;
     margin-bottom: 1rem;
     font-size: 3rem;
     font-weight: bold;
-    font-style: normal; }
-  .feedback__form {
-    margin-top: 2.2rem; }
-    .feedback__form .form-control {
-      display: block;
-      width: 100%;
-      border-radius: 4rem;
-      border: 1px solid #a6a6a6;
-      font-size: 1.5rem;
-      height: 4rem;
-      padding-left: 2.8rem;
-      padding-right: 2.8rem;
-      margin-bottom: 2.4rem; }
-      .feedback__form .form-control::-webkit-input-placeholder {
-        color: #000; }
-      .feedback__form .form-control::-moz-placeholder {
-        color: #000; }
-      .feedback__form .form-control:-ms-input-placeholder {
-        color: #000; }
-      .feedback__form .form-control:focus::-webkit-input-placeholder {
-        transition: line-height 0.5s ease; }
-      .feedback__form .form-control:focus::-moz-placeholder {
-        transition: line-height 0.5s ease; }
-      .feedback__form .form-control:focus:-ms-input-placeholder {
-        transition: line-height 0.5s ease; }
-      .feedback__form .form-control:disabled {
-        opacity: .8; }
-    .feedback__form .form-control {
-      color: #000;
-      text-align: left; }
-    .feedback__form textarea.form-control {
-      border-radius: 1.8rem;
-      height: 9.4rem;
-      padding-top: .6rem; }
-  .feedback .form-actions {
+    font-style: normal;
+    text-align: center; }
+
+.feedback__form,
+.ec-form {
+  margin-top: 2.2rem; }
+  .feedback__form .form-control,
+  .ec-form .form-control {
+    display: block;
+    width: 100%;
+    border-radius: 4rem;
+    border: 1px solid #a6a6a6;
+    font-size: 1.5rem;
+    height: 4rem;
+    padding-left: 2.8rem;
+    padding-right: 2.8rem;
+    margin-bottom: 2.4rem; }
+    .feedback__form .form-control::-webkit-input-placeholder,
+    .ec-form .form-control::-webkit-input-placeholder {
+      color: #000; }
+    .feedback__form .form-control::-moz-placeholder,
+    .ec-form .form-control::-moz-placeholder {
+      color: #000; }
+    .feedback__form .form-control:-ms-input-placeholder,
+    .ec-form .form-control:-ms-input-placeholder {
+      color: #000; }
+    .feedback__form .form-control:focus::-webkit-input-placeholder,
+    .ec-form .form-control:focus::-webkit-input-placeholder {
+      transition: line-height 0.5s ease; }
+    .feedback__form .form-control:focus::-moz-placeholder,
+    .ec-form .form-control:focus::-moz-placeholder {
+      transition: line-height 0.5s ease; }
+    .feedback__form .form-control:focus:-ms-input-placeholder,
+    .ec-form .form-control:focus:-ms-input-placeholder {
+      transition: line-height 0.5s ease; }
+    .feedback__form .form-control:disabled,
+    .ec-form .form-control:disabled {
+      opacity: .8; }
+  .feedback__form .form-control,
+  .ec-form .form-control {
+    color: #000;
+    text-align: left; }
+  .feedback__form textarea.form-control,
+  .ec-form textarea.form-control {
+    border-radius: 1.8rem;
+    height: 9.4rem;
+    padding-top: .6rem; }
+  .feedback__form .form-actions,
+  .ec-form .form-actions {
     margin-bottom: 2rem; }
-  .feedback .submit {
+  .feedback__form .submit,
+  .ec-form .submit {
     display: block;
     height: 4rem;
+    font-size: 1.5rem;
+    font-style: italic;
     margin: 0 auto;
     padding: 0;
     width: 14rem; }
-    .feedback .submit:disabled {
+    .feedback__form .submit:disabled,
+    .ec-form .submit:disabled {
       cursor: default;
       border-color: #ccc;
       opacity: .7;
       filter: grayscale(1); }
-      .feedback .submit:disabled:hover {
+      .feedback__form .submit:disabled:hover,
+      .ec-form .submit:disabled:hover {
         background-color: #2f4f8e;
         color: #fff; }
-  .feedback .policy {
+  .feedback__form .policy,
+  .ec-form .policy {
     font-size: 1.4rem;
     margin-bottom: 3.5rem; }
-    .feedback .policy .user-access + label {
+    .feedback__form .policy .user-access + label,
+    .ec-form .policy .user-access + label {
       color: #262626; }
-    .feedback .policy a {
+    .feedback__form .policy a,
+    .ec-form .policy a {
       color: #2f4f8e; }
-  .feedback .user-access:not(checked) + label:before {
+  .feedback__form .user-access:not(checked) + label:before,
+  .ec-form .user-access:not(checked) + label:before {
     background-color: #2f4f8e;
     border-color: #2f4f8e; }
+
+.reviews__list .item-reviews {
+  background-color: #e5e5e5;
+  margin-bottom: 3.2rem;
+  padding: 1.2rem .8rem 1.8rem; }
+  .reviews__list .item-reviews:last-child {
+    margin-bottom: 0; }
+
+.btn-addreview {
+  display: block;
+  font-style: italic;
+  margin-bottom: 3.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 184px; }
+  .btn-addreview:hover {
+    background-color: #a8a8a8; }
+
+.b-comment {
+  margin-top: 0;
+  padding-top: 1.5rem; }
+
+.ec-antispam {
+  display: none; }
 
 /* =mobile-menu
 ---------------------------*/
