@@ -6,7 +6,7 @@
 
 
 .inner h1.title,
-main h1
+.main h1
 {
 		color: $color4;
 		font-size: 3rem;
@@ -81,6 +81,46 @@ main{
 				top: 0;
 				width: 20px;
 			}
+		}
+	}
+}
+
+
+
+div.pagination{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 2.3rem;
+	ul{
+		// border-top: 1px solid $color4;
+		display: flex;
+		padding: 2.4rem 1.5rem 0;
+		li{
+			margin: 0 .5rem;
+			&.active{
+				a,span{
+					background-color: $color5;
+					color: $color2;
+					text-decoration: none;					
+				}
+			}
+		}
+	}
+	a{
+		background-color: $color4;
+		align-items: center;
+		// border: 1px solid $color4;
+		border-radius: 4px;
+		color: $color2;
+		display: block;
+		display: flex;
+		height: 3rem;
+		justify-content: center;
+		width: 3rem;
+		&:hover{
+			background-color: $color5;
+			color: $color2;
+			text-decoration: none;
 		}
 	}
 }

@@ -3704,7 +3704,8 @@ em strong {
 
 .before, .topline:before, .inner h1.title:after,
 main h1:after,
-.bottomline:after, .top-longline:before, .bottom-longline:after, .share:before, .bottom__menu:before, .bottom__menu .menu-1 .menu-item-4:before, .bottom__menu .menu-2 li:before, .bottom__menu .menu-3 li:before, .bottom__menu .menu-4 li:before, .bottom__menu .menu-5 li:before, .homepage .header .nav li:before, .homepage .header .icon:after, .homepage .works:before, .homepage .works:after, .works__link:before, #news-carousel .slick-slide a:after, main ul li:before {
+.news h1:after,
+.bottomline:after, .top-longline:before, .bottom-longline:after, .share:before, .bottom__menu:before, .bottom__menu .menu-1 .menu-item-4:before, .bottom__menu .menu-2 li:before, .bottom__menu .menu-3 li:before, .bottom__menu .menu-4 li:before, .bottom__menu .menu-5 li:before, .homepage .header .nav li:before, .homepage .header .icon:after, .homepage .works:before, .homepage .works:after, .works__link:before, #news-carousel .slick-slide a:after, main ul li:before, .item-news__pic a:before {
   content: "";
   display: block;
   position: absolute; }
@@ -3742,11 +3743,13 @@ section {
 
 .inner h1.title,
 main h1,
+.news h1,
 .bottomline {
   position: relative;
   padding-bottom: 1.3rem; }
   .inner h1.title:after,
   main h1:after,
+  .news h1:after,
   .bottomline:after {
     background: linear-gradient(to right, #eef1f2 0%, #b6b8b8 50%, #eef1f2 100%);
     bottom: 0;
@@ -3780,10 +3783,10 @@ main h1,
 .webp .fixed-header {
   background-image: url(../images/bg/fixed-header-bg.webp); }
 
-.link-dashed {
+.link-dashed, .item-news__title a {
   border-bottom-width: 1px;
   border-bottom-style: dashed; }
-  .link-dashed:hover {
+  .link-dashed:hover, .item-news__title a:hover {
     border-bottom-color: rgba(0, 0, 0, 0);
     text-decoration: none; }
 
@@ -4995,7 +4998,7 @@ label.error {
   padding-top: 2.2rem; }
 
 .inner h1.title,
-main h1 {
+.main h1 {
   color: #808080;
   font-size: 3rem;
   font-style: normal;
@@ -5052,6 +5055,34 @@ main ol {
       position: absolute;
       top: 0;
       width: 20px; }
+
+div.pagination {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2.3rem; }
+  div.pagination ul {
+    display: flex;
+    padding: 2.4rem 1.5rem 0; }
+    div.pagination ul li {
+      margin: 0 .5rem; }
+      div.pagination ul li.active a, div.pagination ul li.active span {
+        background-color: #2f4f8e;
+        color: #fff;
+        text-decoration: none; }
+  div.pagination a {
+    background-color: #808080;
+    align-items: center;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    width: 3rem; }
+    div.pagination a:hover {
+      background-color: #2f4f8e;
+      color: #fff;
+      text-decoration: none; }
 
 .submenu {
   margin-top: 3.2rem; }
@@ -5230,6 +5261,66 @@ main ol {
 
 .ec-antispam {
   display: none; }
+
+.inner-news .text {
+  padding-top: 1px; }
+
+.news {
+  padding-top: 0; }
+  .news__item {
+    margin: 1.8rem 0; }
+  .news .news__list {
+    margin-top: 1.5rem; }
+
+.item-news__pic img {
+  display: block;
+  border-radius: 10px; }
+
+.item-news__pic a {
+  display: block;
+  position: relative; }
+  .item-news__pic a:before {
+    background: rgba(47, 79, 142, 0.5);
+    border-radius: 10px;
+    height: 112px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 224px;
+    transition: opacity .3s; }
+  .item-news__pic a:hover:before {
+    opacity: 1; }
+
+.item-news__desc {
+  margin-left: 2.4rem; }
+
+.item-news__title {
+  color: #2f4f8e;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: .8rem; }
+  .item-news__title a {
+    color: #2f4f8e; }
+
+.item-news__text {
+  color: #000;
+  line-height: 1.7;
+  margin: 1.5rem 0 1.2rem; }
+
+.item-news__date {
+  color: #404040;
+  display: block;
+  margin-top: 2rem; }
+
+.item-news__link {
+  border-bottom: 1px solid #808080;
+  color: #d9d9d9;
+  display: inline-block; }
+  .item-news__link:hover {
+    border-bottom-color: rgba(255, 255, 255, 0);
+    color: #d9d9d9;
+    text-decoration: none; }
 
 /* =mobile-menu
 ---------------------------*/
