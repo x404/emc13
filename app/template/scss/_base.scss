@@ -277,6 +277,7 @@ main h1,
 }
 
 .top-longline{
+	padding-top: 3.2rem;
 	&:before{
 		@extend .before;
 		background: linear-gradient(to right, #eef1f2 0%, #b6b8b8 50%, #eef1f2 100%);
@@ -288,6 +289,7 @@ main h1,
 }
 
 .bottom-longline{
+	padding-bottom: 3.2rem;
 	&:after{
 		@extend .before;
 		background: linear-gradient(to right, #eef1f2 0%, #b6b8b8 50%, #eef1f2 100%);
