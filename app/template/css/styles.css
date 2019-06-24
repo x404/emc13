@@ -3675,9 +3675,15 @@ em strong {
   .btn-gray {
     background-color: #bfbfbf;
     color: #fff; }
+  .btn-blue {
+    background-color: #2f4f8e;
+    color: #fff; }
   .btn-hover-blue:hover {
     background-color: #3f6cb5;
     color: #fff; }
+  .btn-hover-white:hover {
+    background-color: #fff;
+    color: #000; }
   .btn-inline {
     background: none;
     padding: 0;
@@ -4147,7 +4153,7 @@ footer {
   z-index: -1; }
   #callback.show {
     opacity: 1;
-    z-index: 100; }
+    z-index: 1000; }
   #callback .container {
     display: flex;
     align-items: center;
@@ -5078,6 +5084,87 @@ main ol {
 
 .inner .more-wrapper {
   padding-bottom: 3.2rem; }
+
+.inner-contacts main {
+  font-style: normal;
+  color: #262626; }
+
+#ymap {
+  height: 35rem;
+  margin: 3rem 0; }
+
+.feedback {
+  font-size: 1.5rem;
+  position: relative;
+  width: 92%;
+  margin: 3rem auto 0;
+  padding-top: 0;
+  color: #000; }
+  .feedback__title {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: normal; }
+  .feedback__form {
+    margin-top: 2.2rem; }
+    .feedback__form .form-control {
+      display: block;
+      width: 100%;
+      border-radius: 4rem;
+      border: 1px solid #a6a6a6;
+      font-size: 1.5rem;
+      height: 4rem;
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+      margin-bottom: 2.4rem; }
+      .feedback__form .form-control::-webkit-input-placeholder {
+        color: #000; }
+      .feedback__form .form-control::-moz-placeholder {
+        color: #000; }
+      .feedback__form .form-control:-ms-input-placeholder {
+        color: #000; }
+      .feedback__form .form-control:focus::-webkit-input-placeholder {
+        transition: line-height 0.5s ease; }
+      .feedback__form .form-control:focus::-moz-placeholder {
+        transition: line-height 0.5s ease; }
+      .feedback__form .form-control:focus:-ms-input-placeholder {
+        transition: line-height 0.5s ease; }
+      .feedback__form .form-control:disabled {
+        opacity: .8; }
+    .feedback__form .form-control {
+      text-align: left; }
+    .feedback__form textarea.form-control {
+      border-radius: 1.8rem;
+      color: #fff;
+      height: 9.4rem;
+      padding-top: .6rem; }
+  .feedback .form-actions {
+    margin-bottom: 2rem; }
+  .feedback .submit {
+    display: block;
+    height: 4rem;
+    margin: 0 auto;
+    padding: 0;
+    width: 14rem; }
+    .feedback .submit:disabled {
+      cursor: default;
+      border-color: #ccc;
+      opacity: .7;
+      filter: grayscale(1); }
+      .feedback .submit:disabled:hover {
+        background-color: #2f4f8e;
+        color: #fff; }
+  .feedback .policy {
+    font-size: 1.4rem;
+    margin-bottom: 3.5rem; }
+    .feedback .policy .user-access + label {
+      color: #262626; }
+    .feedback .policy a {
+      color: #2f4f8e; }
+  .feedback .user-access:not(checked) + label:before {
+    background-color: #2f4f8e;
+    border-color: #2f4f8e; }
 
 /* =mobile-menu
 ---------------------------*/

@@ -163,13 +163,22 @@ em strong
 		background-color: #bfbfbf;
 		color: $color2;
 	}
+	&-blue{
+		background-color: $color5;
+		color: $color2;	
+	}
 	&-hover-blue{
 		&:hover{
 			background-color: $color12;
 			color: $color2;			
 		}
 	}
-
+	&-hover-white{
+		&:hover{
+			background-color: $color2;
+			color: $color1;
+		}
+	}
 	&-inline{
 		background: none;
 		padding: 0;
@@ -852,7 +861,7 @@ footer{
 	
 	&.show{
 		opacity: 1;
-		z-index: 100;
+		z-index: 1000;
 	}
 	.container{
 		display: flex;

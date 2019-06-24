@@ -1,0 +1,98 @@
+.inner-contacts{
+	main{
+		font-style: normal;
+		color: $color13;
+	}
+}
+
+#ymap{
+	height: 35rem;
+	margin: 3rem 0;
+}
+
+
+.feedback{
+	font-size: 1.5rem;
+	position: relative;
+	width: 92%;
+	margin: 3rem auto 0 ;
+	padding-top: 0;
+	color: $color1;
+
+	&__title{
+		color: $color14;
+		margin-bottom: 1rem;
+		font-size: 3rem;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	&__form{
+		margin-top: 2.2rem;
+		.form-control{
+			@include placeholder(#000);
+			display: block;
+			width: 100%;
+			// background: $color10;
+			$h: 4rem;
+			border-radius: $h;
+			border: 1px solid $color9;
+			font-size: 1.5rem;
+			height: $h;
+			padding-left: 1.2rem;
+			padding-right: 1.2rem;
+			margin-bottom: 2.4rem;
+			&:disabled{
+				opacity: .8;
+			}
+		}
+
+		.form-control{
+			text-align: left;
+		}
+		textarea.form-control{
+			border-radius: 1.8rem;
+			color: $color2;
+			height: 9.4rem;
+			padding-top: .6rem;	
+		}
+	}
+
+	.form-actions{
+		margin-bottom: 2rem;
+	}
+
+	.submit{
+		display: block;
+		height: 4rem;
+		margin: 0 auto;
+		padding: 0;
+		width: 14rem;
+		&:disabled{
+			cursor: default;
+			border-color: #ccc;
+			opacity: .7;
+			filter: grayscale(1);
+			&:hover{
+				background-color: $color5;
+				color: $color2;
+			}
+		}		
+	}
+
+	.policy{
+		font-size: 1.4rem;
+		margin-bottom: 3.5rem;
+		.user-access+label{
+			color: $color13;			
+		}
+		a{
+			color: $color5;
+
+		}
+	}
+	.user-access:not(checked)+label:before{
+		background-color: $color5;
+		border-color: $color5
+	}
+}
