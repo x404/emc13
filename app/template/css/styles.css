@@ -3657,16 +3657,21 @@ em strong {
   .tdu:hover {
     text-decoration: none; }
 
+#back-top {
+  font-family: 'ucb';
+  text-transform: uppercase;
+  font-size: 13px;
+  border-radius: 5px;
+  height: 2.4rem; }
+
 .btn {
   border: none;
   cursor: pointer;
-  font-family: 'ucb';
-  font-size: 13px;
   font-weight: normal;
   padding: .2rem 2rem;
   transition: .3s;
-  text-transform: uppercase;
-  border-radius: 5px; }
+  height: 3.2rem;
+  border-radius: 3.2rem; }
   .btn-gray {
     background-color: #bfbfbf;
     color: #fff; }
@@ -3681,6 +3686,15 @@ em strong {
     cursor: pointer; }
     .btn-inline:hover {
       border-bottom-color: rgba(255, 255, 255, 0) !important; }
+
+#more-works {
+  background-color: #808080;
+  color: #fff;
+  display: block;
+  font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+  width: 184px; }
 
 .before, .topline:before, .inner h1.title:after,
 main h1:after,
@@ -3863,7 +3877,6 @@ body.fixed.sticky .fixed-header {
     background-color: #2f4f8e; }
 
 .share {
-  margin-top: 2.5rem;
   padding: 3.2rem 0 4.5rem;
   text-align: center;
   position: relative; }
@@ -4680,6 +4693,9 @@ label.error {
 .item-reviews__text {
   line-height: 1.7; }
 
+.news-actions {
+  margin-bottom: 1.3rem; }
+
 #news-carousel .slick-slide {
   text-align: center; }
   #news-carousel .slick-slide a {
@@ -5057,7 +5073,11 @@ main ol {
 
 .inner .works__list {
   padding-top: 5rem;
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  margin-bottom: 3.2rem; }
+
+.inner .more-wrapper {
+  padding-bottom: 3.2rem; }
 
 /* =mobile-menu
 ---------------------------*/

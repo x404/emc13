@@ -142,16 +142,23 @@ em strong
 }
 
 
+#back-top{
+	font-family: 'ucb';
+	text-transform: uppercase;
+	font-size: 13px;
+	border-radius: 5px;
+	height: 2.4rem;
+}
+
+
 .btn{
 	border: none;
 	cursor: pointer;
-	font-family: 'ucb';
-	font-size: 13px;
 	font-weight: normal;
 	padding: .2rem 2rem;
 	transition: .3s;
-	text-transform: uppercase;
-	border-radius: 5px;
+	height: 3.2rem;
+	border-radius: 3.2rem;
 	&-gray{
 		background-color: #bfbfbf;
 		color: $color2;
@@ -173,6 +180,16 @@ em strong
 			border-bottom-color: rgba(255,255,255,0) !important;
 		}
 	}
+}
+
+#more-works{
+	background-color: $color4;
+	color: $color2;
+	display: block;
+	font-style: italic;
+	margin-left: auto;
+	margin-right: auto;
+	width: 184px;
 }
 
 .before{
@@ -437,7 +454,7 @@ body.fixed{
 }
 
 .share{
-	margin-top: 2.5rem;
+	// margin-top: 2.5rem;
 	padding: 3.2rem 0 4.5rem;
 	text-align: center;
 	position: relative;

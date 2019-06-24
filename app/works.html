@@ -165,9 +165,12 @@
 						<div class="works__item">
 							<a href="#" title="" class="works__link" aria-label="название"><img src="/images/027.png" alt="" loading="lazy" /></a>
 						</div>
+
 					</div>
 
-					<button type="button" id="loadmore" class="btn btn-gray">показать еще</button>
+					<div class="more-wrapper bottom-longline">
+						<button type="button" id="more-works" class="btn">показать еще</button>
+					</div>
 
 					<p>Основное направление нашей деятельности - это печать самоклеящихся этикеток, стикеров, термоэтикеток, марок, наклеек и других видов печатной продукции, которые наклеиваются на любой ваш товар. Материал для нанесения может быть разный:  бумажный. пленочный или металлизированный. Наша типография может вам предложить несколько способов печати, в зависимости от тиража и бюджета.  Для больших тиражей - это будет флексопечать, а для малых до 1000 штук - цифровая.</p>
 				</div>
@@ -317,6 +320,33 @@
 			}
 		}
 	}
+
+	// more works
+	document.querySelector('#more-works').onclick = function(e){
+		e.preventDefault;
+		let url = 'works-data.txt';
+
+		fetch(url, {
+			method: 'post',
+			headers: {
+		        "Content-Type": "text/html"
+			}
+		})
+		.then((response) => {
+			// response.text().then(function(text) {
+	    	// }
+	    	return response.text()
+		})
+		.then((data) => {
+			// document.querySelector('.works__list').innerHTML = data;
+			$('.works__list').append(data);
+			// console.log(items);
+		})
+		.catch (function (error) {
+		    console.log('Works loaded request failed', error);
+		})
+	}
+
 </script>
 <!-- InstanceEndEditable -->	
 	

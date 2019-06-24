@@ -1,0 +1,21 @@
+	<div class="works__item">
+		<a href="#" title="" class="works__link" aria-label="название"><img src="/images/020.png" alt="" loading="lazy" /></a>
+	</div>
+	<div class="works__item">
+		<a href="#" title="" class="works__link" aria-label="название"><img src="/images/021.png" alt="" loading="lazy" /></a>
+	</div>
+	<div class="works__item">
+		<a href="#" title="" class="works__link" aria-label="название"><img src="/images/022.png" alt="" loading="lazy" /></a>
+	</div>
+	<div class="works__item">
+		<a href="#" title="" class="works__link" aria-label="название"><img src="/images/023.png" alt="" loading="lazy" /></a>
+	</div>
+	<div class="works__item">
+		<a href="#" title="" class="works__link" aria-label="название"><img src="/images/024.png" alt="" loading="lazy" /></a>
+	</div>
+	<div class="works__item">
+		<a href="#" title="" class="works__link" aria-label="название"><img src="/images/025.png" alt="" loading="lazy" /></a>
+	</div>
+	<div class="works__item">
+		<a href="#" title="" class="works__link" aria-label="название"><img src="/images/026.png" alt="" loading="lazy" /></a>
+	</div>
