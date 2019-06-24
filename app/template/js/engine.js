@@ -64,17 +64,6 @@ $(document).ready(function(){
 				validphone:true
 			}
 		},
-		// errorPlacement: function(error, element) {
-		// 	if (element.attr('name') == 'name') {
-		// 		$('#callback-form .helper-field-name').text('Заполните поле');
-		// 		$('#callback-form .helper-field-name').addClass('error')
-		// 	}
-
-		// 	if (element.attr('name') == 'tel'){
-		// 		$('#callback-form .helper-field-tel').text('Заполните поле');
-		// 		$('#callback-form .helper-field-tel').addClass('error')
-		// 	}
-		// },
 		submitHandler:function(form) {
 			let strSubmit= $(form).serialize(),
 				url = $(form).attr('action');
@@ -82,6 +71,23 @@ $(document).ready(function(){
 		}
 	});	
 
+
+
+	$('#feedback-form').validate({
+		rules: {
+			name:{
+				required : true
+			},
+			tel: {
+				validphone:true
+			}
+		},
+		submitHandler:function(form) {
+			let strSubmit= $(form).serialize(),
+				url = $(form).attr('action');
+			sendform(url, strSubmit, form);
+		}
+	});	
 });
 
 

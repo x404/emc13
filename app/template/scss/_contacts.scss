@@ -19,6 +19,15 @@
 	padding-top: 0;
 	color: $color1;
 
+	.sending,
+	.thank{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		height: 29.8rem;
+	}
+
 	&__title{
 		color: $color14;
 		margin-bottom: 1rem;
@@ -39,8 +48,8 @@
 			border: 1px solid $color9;
 			font-size: 1.5rem;
 			height: $h;
-			padding-left: 1.2rem;
-			padding-right: 1.2rem;
+			padding-left: 2.8rem;
+			padding-right: 2.8rem;
 			margin-bottom: 2.4rem;
 			&:disabled{
 				opacity: .8;
@@ -48,11 +57,11 @@
 		}
 
 		.form-control{
+			color: $color1;
 			text-align: left;
 		}
 		textarea.form-control{
 			border-radius: 1.8rem;
-			color: $color2;
 			height: 9.4rem;
 			padding-top: .6rem;	
 		}

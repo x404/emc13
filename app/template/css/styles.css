@@ -5100,6 +5100,13 @@ main ol {
   margin: 3rem auto 0;
   padding-top: 0;
   color: #000; }
+  .feedback .sending,
+  .feedback .thank {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 29.8rem; }
   .feedback__title {
     color: #666;
     margin-bottom: 1rem;
@@ -5115,8 +5122,8 @@ main ol {
       border: 1px solid #a6a6a6;
       font-size: 1.5rem;
       height: 4rem;
-      padding-left: 1.2rem;
-      padding-right: 1.2rem;
+      padding-left: 2.8rem;
+      padding-right: 2.8rem;
       margin-bottom: 2.4rem; }
       .feedback__form .form-control::-webkit-input-placeholder {
         color: #000; }
@@ -5133,10 +5140,10 @@ main ol {
       .feedback__form .form-control:disabled {
         opacity: .8; }
     .feedback__form .form-control {
+      color: #000;
       text-align: left; }
     .feedback__form textarea.form-control {
       border-radius: 1.8rem;
-      color: #fff;
       height: 9.4rem;
       padding-top: .6rem; }
   .feedback .form-actions {
