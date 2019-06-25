@@ -4,6 +4,7 @@
 		 url('../fonts/DS Eraser Cyr.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 /* font-family: "SegoeUIRegular"; */
@@ -15,6 +16,7 @@
 	url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
+	font-display: swap;
 }
 /* font-family: "SegoeUIBold"; */
 @font-face {
@@ -25,6 +27,7 @@
 	url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
 	font-style: normal;
 	font-weight: bold;
+	font-display: swap;
 }
 
 @font-face {
@@ -35,6 +38,7 @@
 	url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
 	font-style: italic;
 	font-weight: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -45,6 +49,7 @@
 	url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.ttf") format("truetype");
 	font-style: italic;
 	font-weight: bold;
+	font-display: swap;
 }
 
 
@@ -54,4 +59,5 @@
 	src: url('../fonts/univers_condensed_bold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }

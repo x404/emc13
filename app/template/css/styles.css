@@ -302,7 +302,8 @@ template {
   font-family: 'DS Eraser Cyr';
   src: local("DS Eraser Cyr"), url("../fonts/DS Eraser Cyr.woff") format("woff");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 /* font-family: "SegoeUIRegular"; */
 @font-face {
@@ -310,7 +311,8 @@ template {
   src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
   src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
   font-style: normal;
-  font-weight: normal; }
+  font-weight: normal;
+  font-display: swap; }
 
 /* font-family: "SegoeUIBold"; */
 @font-face {
@@ -318,27 +320,31 @@ template {
   src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
   src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
   font-style: normal;
-  font-weight: bold; }
+  font-weight: bold;
+  font-display: swap; }
 
 @font-face {
   font-family: "SegoeUIRegular";
   src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
   src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
   font-style: italic;
-  font-weight: normal; }
+  font-weight: normal;
+  font-display: swap; }
 
 @font-face {
   font-family: "SegoeUIRegular";
   src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot");
   src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.woff") format("woff"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.ttf") format("truetype");
   font-style: italic;
-  font-weight: bold; }
+  font-weight: bold;
+  font-display: swap; }
 
 @font-face {
   font-family: 'ucb';
   src: url("../fonts/univers_condensed_bold.woff") format("woff");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 *,
 *::before,
@@ -3578,8 +3584,7 @@ body {
   background: url(../images/bg.png) #ebeeef;
   font-size: 14px;
   font-size: 1.4rem;
-  font-display: swap;
-  font-family: "SegoeUIRegular";
+  font-family: SegoeUI, 'SegoeUIRegular', 'Segoe UI', "Open Sans",Helvetica;
   font-style: italic; }
 
 html, body {
@@ -3718,7 +3723,7 @@ main h1:after,
 .actions h1:after,
 .bottomline:after, .top-longline:before, .bottom-longline:after, .share:before, .bottom__menu:before, .bottom__menu .menu-1 .menu-item-4:before, .bottom__menu .menu-2 li:before, .bottom__menu .menu-3 li:before, .bottom__menu .menu-4 li:before, .bottom__menu .menu-5 li:before, .homepage .header .nav li:before, .homepage .header .icon:after, .homepage .works:before, .homepage .works:after, .works__link:before, #news-carousel .slick-slide a:after, #carousel a:before, #carousel a:after,
 #carousel2 a:before,
-#carousel2 a:after, main ul li:before, .item-news__pic a:before, .item-actions__pic a:before {
+#carousel2 a:after, .mainpic a:after, main ul li:before, .item-news__pic a:before, .item-actions__pic a:before {
   content: "";
   display: block;
   position: absolute; }
@@ -4300,7 +4305,8 @@ label.error {
   font-family: 'DS Eraser Cyr';
   src: local("DS Eraser Cyr"), url("../fonts/DS Eraser Cyr.woff") format("woff");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 /* font-family: "SegoeUIRegular"; */
 @font-face {
@@ -4308,7 +4314,8 @@ label.error {
   src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
   src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
   font-style: normal;
-  font-weight: normal; }
+  font-weight: normal;
+  font-display: swap; }
 
 /* font-family: "SegoeUIBold"; */
 @font-face {
@@ -4316,27 +4323,31 @@ label.error {
   src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
   src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
   font-style: normal;
-  font-weight: bold; }
+  font-weight: bold;
+  font-display: swap; }
 
 @font-face {
   font-family: "SegoeUIRegular";
   src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
   src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
   font-style: italic;
-  font-weight: normal; }
+  font-weight: normal;
+  font-display: swap; }
 
 @font-face {
   font-family: "SegoeUIRegular";
   src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot");
   src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.woff") format("woff"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.ttf") format("truetype");
   font-style: italic;
-  font-weight: bold; }
+  font-weight: bold;
+  font-display: swap; }
 
 @font-face {
   font-family: 'ucb';
   src: url("../fonts/univers_condensed_bold.woff") format("woff");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 .webp .homepage .header {
   background-image: url(../images/bg/header-bg.webp); }
@@ -5087,6 +5098,24 @@ label.error {
     #carousel2 a:hover:after {
       opacity: 1;
       transform: scale(1); }
+
+.mainpic a {
+  position: relative;
+  display: inline-block;
+  border-bottom: none; }
+  .mainpic a img {
+    border-radius: 15px; }
+  .mainpic a:after {
+    border-radius: 15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #2f4f8e;
+    opacity: 0;
+    transition: opacity .3s; }
+  .mainpic a:hover:after {
+    opacity: .5; }
 
 main {
   color: #000; }

@@ -78,6 +78,34 @@
 	}
 }
 
+
+.mainpic{
+	a{
+		$radius: 15px;
+		position: relative;
+		display: inline-block;
+		border-bottom: none;
+		img{
+			border-radius: $radius;			
+		}
+		&:after{
+			border-radius: $radius;
+			@extend .before;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+			background-color: #2f4f8e;
+			opacity: 0;
+			transition: opacity .3s;
+		}
+		&:hover{
+			&:after{
+				opacity: .5;
+			}
+		}
+	}
+}
 main{
 	color: #000;
 	h1{
