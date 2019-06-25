@@ -3595,7 +3595,8 @@ input::-moz-focus-inner {
   padding: 0; }
 
 .d-grid {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 
 .main-grid {
   height: 100%;
@@ -3810,11 +3811,11 @@ main h1,
     border-bottom-color: rgba(0, 0, 0, 0);
     text-decoration: none; }
 
-.link-nodashed, .fixed-header .nav a, aside .submenu a {
+.link-nodashed, .fixed-header .nav a, footer .creators a, aside .submenu a {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: rgba(0, 0, 0, 0); }
-  .link-nodashed:hover, .fixed-header .nav a:hover, aside .submenu a:hover {
+  .link-nodashed:hover, .fixed-header .nav a:hover, footer .creators a:hover, aside .submenu a:hover {
     text-decoration: none; }
 
 body.fixed .inner {
@@ -3833,8 +3834,8 @@ body.fixed.sticky .fixed-header {
   background-image: url(../images/bg/fixed-header-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   transition: transform .6s;
+  width: 100%;
   z-index: 999; }
   .fixed-header-body {
     height: 110px; }
@@ -3858,6 +3859,12 @@ body.fixed.sticky .fixed-header {
     font-size: 2.2rem;
     font-weight: bold;
     font-style: italic; }
+
+.homepage .fixed-header {
+  transform: translateY(-140%);
+  position: fixed;
+  left: 0;
+  top: 0; }
 
 .sticky .homepage .fixed-header {
   transform: translateY(0); }
@@ -4131,7 +4138,12 @@ footer {
       color: #3d4f59;
       text-decoration: none; }
   footer .creators {
-    text-align: right; }
+    text-align: right;
+    color: #3d4f59; }
+    footer .creators a {
+      color: #3d4f59; }
+      footer .creators a:hover {
+        border-bottom-color: #3d4f59; }
 
 .social a {
   background-color: #ccc;
@@ -5750,3 +5762,22 @@ div.pagination {
 
 ::-ms-clear {
   display: none; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .grid-xl-4 {
+    width: 100%; }
+  .advantage__item {
+    width: 25%; }
+  .works__list {
+    justify-content: flex-start !important; }
+    .works__list .works__item {
+      margin-bottom: 30px;
+      margin-right: 30px; }
+  .social a {
+    display: inline-block;
+    padding-top: 2px;
+    text-align: center; }
+    .social a img {
+      margin: 0; }
+  .bottom__menu .logo {
+    margin-top: 60px; } }

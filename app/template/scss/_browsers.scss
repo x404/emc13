@@ -17,4 +17,32 @@ _::-webkit-full-page-media, _:future, :root .selector {
 
 //ie11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.grid-xl-4{
+		width: 100%;
+	}
+
+	.advantage__item{
+		width: 25%;
+	}
+
+	.works__list{
+		justify-content: flex-start !important;
+		.works__item{
+			margin-bottom: 30px;
+			margin-right: 30px;
+		}
+	}
+
+	.social a{
+		display: inline-block;
+		padding-top: 2px;
+		text-align: center;
+		img{
+			margin: 0;
+		}
+	}
+
+	.bottom__menu .logo{
+		margin-top: 60px;
+	}
 }
