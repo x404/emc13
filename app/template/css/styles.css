@@ -5534,6 +5534,48 @@ div.pagination {
     color: #d9d9d9;
     text-decoration: none; }
 
+.letters {
+  font-size: 2.1rem;
+  font-style: normal;
+  margin-bottom: 3.5rem;
+  padding: 1rem 0;
+  text-transform: uppercase; }
+  .letters li {
+    padding: 0 2px 0 3px; }
+    .letters li:before {
+      display: none; }
+    .letters li.active a, .letters li.active span {
+      background-color: #2f4f8e;
+      color: #fff;
+      border-color: #fff; }
+  .letters a {
+    align-items: center;
+    border-bottom: none;
+    border: 1px dotted rgba(255, 255, 255, 0);
+    color: #3d4f59;
+    display: flex;
+    height: 31px;
+    justify-content: center;
+    text-align: center;
+    width: 24px; }
+    .letters a:hover {
+      background-color: #2f4f8e;
+      border-color: #fff;
+      color: #fff; }
+
+.word__list {
+  margin-bottom: 4rem; }
+
+.word__item {
+  background-color: #e5e5e5;
+  margin: 2.4rem 0;
+  padding: .9rem; }
+  .word__item p {
+    margin: 0; }
+  .word__item .title {
+    font-weight: bold;
+    font-size: 1.8rem; }
+
 .link-home {
   margin: 6rem 0 4rem;
   font-size: 1.5rem; }
