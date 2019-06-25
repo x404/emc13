@@ -5039,6 +5039,18 @@ label.error {
 .inner .main {
   padding-top: 2.2rem; }
 
+.inner .mainpic {
+  flex-grow: 1;
+  margin-right: 2.7rem;
+  text-align: center; }
+  .inner .mainpic img {
+    max-width: 100%; }
+  .inner .mainpic + .text > p {
+    margin-top: 0; }
+
+.inner .characteristics {
+  width: 405px; }
+
 .inner h1.title,
 .main h1 {
   color: #808080;
@@ -5242,6 +5254,14 @@ div.pagination {
         background-color: #2f4f8e; }
   .submenu.bottom-longline {
     padding-bottom: 4rem; }
+  .submenu-work {
+    padding: 0 !important; }
+    .submenu-work ul {
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem; }
+      .submenu-work ul a {
+        background-color: #a8a8a8;
+        color: #fff; }
 
 .inner .works__list {
   padding-top: 5rem;
