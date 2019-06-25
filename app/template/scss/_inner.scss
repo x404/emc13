@@ -20,8 +20,14 @@
 #carousel2
 {
 	display: flex;
+	& > div{
+		margin-right: 3rem;
+	}
 	&.slick-initialized{
 		display: block;
+		& > div{
+			margin-right: 0;
+		}
 	}
 
 	img{
@@ -146,7 +152,33 @@ main{
 	}
 }
 
-
+aside{
+	.submenu{
+		margin-top: 7.5rem;
+		background-color: #777979;
+		border-radius: 1.5rem;
+		color: $color2;
+		font-size: 1.5rem;
+		padding: .2rem 1.6rem .9rem;
+		li{
+			margin: 1rem 0;
+			&.active{
+				a, span{
+					border-bottom-color: #fff;
+					cursor: default;
+				}
+			}
+		} 
+		a{
+			color: currentColor;
+			@extend .link-nodashed;
+			&:hover{
+				text-decoration: none;
+				border-bottom-color: #fff;
+			}
+		}
+	}
+}
 
 div.pagination{
 	display: flex;

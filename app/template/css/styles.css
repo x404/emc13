@@ -3805,11 +3805,11 @@ main h1,
     border-bottom-color: rgba(0, 0, 0, 0);
     text-decoration: none; }
 
-.link-nodashed, .fixed-header .nav a {
+.link-nodashed, .fixed-header .nav a, aside .submenu a {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: rgba(0, 0, 0, 0); }
-  .link-nodashed:hover, .fixed-header .nav a:hover {
+  .link-nodashed:hover, .fixed-header .nav a:hover, aside .submenu a:hover {
     text-decoration: none; }
 
 body.fixed .inner {
@@ -4639,13 +4639,13 @@ label.error {
 #clients-carousel,
 #news-carousel,
 #carousel,
-#carouse2 {
+#carousel2 {
   display: flex; }
   #services-carousel.slick-initialized,
   #clients-carousel.slick-initialized,
   #news-carousel.slick-initialized,
   #carousel.slick-initialized,
-  #carouse2.slick-initialized {
+  #carousel2.slick-initialized {
     display: block; }
   #services-carousel .slick-prev, #services-carousel .slick-next,
   #clients-carousel .slick-prev,
@@ -4654,8 +4654,8 @@ label.error {
   #news-carousel .slick-next,
   #carousel .slick-prev,
   #carousel .slick-next,
-  #carouse2 .slick-prev,
-  #carouse2 .slick-next {
+  #carousel2 .slick-prev,
+  #carousel2 .slick-next {
     position: absolute;
     top: 50%;
     margin-top: -16px;
@@ -4664,25 +4664,25 @@ label.error {
   #clients-carousel .slick-prev,
   #news-carousel .slick-prev,
   #carousel .slick-prev,
-  #carouse2 .slick-prev {
+  #carousel2 .slick-prev {
     left: -50px; }
     #services-carousel .slick-prev:hover,
     #clients-carousel .slick-prev:hover,
     #news-carousel .slick-prev:hover,
     #carousel .slick-prev:hover,
-    #carouse2 .slick-prev:hover {
+    #carousel2 .slick-prev:hover {
       left: -55px; }
   #services-carousel .slick-next,
   #clients-carousel .slick-next,
   #news-carousel .slick-next,
   #carousel .slick-next,
-  #carouse2 .slick-next {
+  #carousel2 .slick-next {
     right: -50px; }
     #services-carousel .slick-next:hover,
     #clients-carousel .slick-next:hover,
     #news-carousel .slick-next:hover,
     #carousel .slick-next:hover,
-    #carouse2 .slick-next:hover {
+    #carousel2 .slick-next:hover {
       right: -55px; }
 
 .carousel {
@@ -5039,9 +5039,15 @@ label.error {
 #carousel,
 #carousel2 {
   display: flex; }
+  #carousel > div,
+  #carousel2 > div {
+    margin-right: 3rem; }
   #carousel.slick-initialized,
   #carousel2.slick-initialized {
     display: block; }
+    #carousel.slick-initialized > div,
+    #carousel2.slick-initialized > div {
+      margin-right: 0; }
   #carousel img,
   #carousel2 img {
     border-radius: 15px; }
@@ -5131,6 +5137,24 @@ main {
         width: 20px; }
   main .carousel {
     margin: 3rem 0; }
+
+aside .submenu {
+  margin-top: 7.5rem;
+  background-color: #777979;
+  border-radius: 1.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: .2rem 1.6rem .9rem; }
+  aside .submenu li {
+    margin: 1rem 0; }
+    aside .submenu li.active a, aside .submenu li.active span {
+      border-bottom-color: #fff;
+      cursor: default; }
+  aside .submenu a {
+    color: currentColor; }
+    aside .submenu a:hover {
+      text-decoration: none;
+      border-bottom-color: #fff; }
 
 div.pagination {
   display: flex;
