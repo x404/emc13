@@ -36,6 +36,13 @@ $(document).ready(function(){
 		arrows: true,
 		slidesToScroll: 1
 	});
+	$('#actions-carousel').slick({
+		prevArrow:'<button class="slick-arrow slick-prev" aria-label="Назад" type="button"><-</button>',
+		nextArrow:'<button class="slick-arrow slick-next" aria-label="Вперед" type="button">-></button>',
+		slidesToShow: 4,
+		arrows: true,
+		slidesToScroll: 1
+	});
 
 
 	$('#carousel').slick({
@@ -222,6 +229,3 @@ function sendform(url, strSubmit, form){
 	    console.log('Request failed', error);
 	});
 }
-
-
-

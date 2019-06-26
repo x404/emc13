@@ -432,6 +432,7 @@
 #services-carousel,
 #clients-carousel,
 #news-carousel,
+#actions-carousel,
 #carousel,
 #carousel2
 {
@@ -546,8 +547,38 @@
 
 .news-actions{
 	margin-bottom: 1.3rem;
+
+	.title .current{
+		color: $color5;
+	}
+	
+	.carousel{
+		// position: relative;
+		// overflow: hidden;
+	}
+
+	.tab{
+		display: none;
+		// opacity: 0;
+		// position: absolute;
+		&-current{
+			// position: static;
+			display: block !important;
+			animation: fadein .5s;
+			// opacity: 1;
+		}
+	}
 }
-#news-carousel
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+#news-carousel,
+#actions-carousel
 {
 	.slick-slide{
 		text-align: center;

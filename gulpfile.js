@@ -77,10 +77,11 @@ gulp.task('compress', function(){
 			gulp.src([  // Берем все необходимые библиотеки
 				config.templateDir + '/js/modernizr-custom-webp.js',
 				config.templateDir + '/js/modernizr.js',
-				config.libsDir + '/jquery/dist/jquery.js',
+				config.libsDir + '/jquery/dist/jquery.slim.min.js',
 				config.libsDir + '/jquery-validation/dist/jquery.validate.min.js',
 				config.templateDir + '/js/util.js',
-				config.templateDir + '/js/collapse.js',
+				// config.sourceDir + '/js/tab.js',
+				// config.templateDir + '/js/collapse.js',
 				config.templateDir + '/js/popper.min.js',
 				config.templateDir + '/js/jquery.fancybox.min.js'
 			]),

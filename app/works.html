@@ -247,7 +247,7 @@
 					<a href="#" title="" target="_blank" class="tv"><img src="/template/images/icons/tv.png" alt="Twitter" /></a>
 					<a href="#" title="" target="_blank" class="vk"><img src="/template/images/icons/vk.png" alt="Вконтакте" /></a>
 					<a href="#" title="" target="_blank" class="rss"><img src="/template/images/icons/rss.png" alt="RSS" /></a>
-				</div>
+				</div> 
 				<div class="creators">
 					<p>Kreotif Design <a href="https://kreotif.com" title="Дизайн сайтов" target="_blank">Создание сайта</a></p>
 					<p>Программирование сайта - <a href="https://proverstka.com.ua" title="Программирование и вёрстка сайтов" target="_blank">Провёрстка</a></p>
@@ -334,14 +334,10 @@
 			}
 		})
 		.then((response) => {
-			// response.text().then(function(text) {
-	    	// }
 	    	return response.text()
 		})
 		.then((data) => {
-			// document.querySelector('.works__list').innerHTML = data;
 			$('.works__list').append(data);
-			// console.log(items);
 		})
 		.catch (function (error) {
 		    console.log('Works loaded request failed', error);

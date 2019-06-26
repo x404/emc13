@@ -18,7 +18,8 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-TileImage" content="/the_favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="/the_favicon/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
+
+
 
 <title>Главная</title>
 <link rel="stylesheet" href="/template/css/styles.min.css" />
@@ -41,7 +42,7 @@
 			</div>
 			<ul class="nav">
 				<li class="nav-1">
-					<a href="#" title="" class="icon icon-1">
+					<a href="about.html" title="" class="icon icon-1">
 						<span class="nav-title">о нас</span>
 					</a>
 				</li>
@@ -410,43 +411,80 @@
 	<!-- =news -->
 	<section class="news-actions">
 		<div class="container">
-			<h1 class="title"><a href="#" title="">Новости</a> и <a href="#" title="">Акции</a>
+			<h1 class="title"><a href="#" title="" data-target="#tab-news" class="current">Новости</a> и <a href="#" title="" data-target="#tab-actions">Акции</a>
 			</h1>
 			<div class="text">
 				<p>В разделе представлена полезная информация и актуальные материалы.</p>
 			</div>
 
 			<div class="carousel">
-				<div id="news-carousel">
-					<div>
-						<a href="#" title="">
-							<img src="/images/new-1.jpg" alt="" />
-							<h3 class="news__title">название новости или акции</h3>
-						</a>
-					</div>
-					<div>
-						<a href="#" title="">
-							<img src="/images/new-2.jpg" alt="" />
-							<h3 class="news__title">название новости или акции</h3>
-						</a>
-					</div>
-					<div>
-						<a href="#" title="">
-							<img src="/images/new-3.jpg" alt="" />
-							<h3 class="news__title">название новости или акции</h3>
-						</a>
-					</div>
-					<div>
-						<a href="#" title="">
-							<img src="/images/new-4.jpg" alt="" />
-							<h3 class="news__title">название новости или акции</h3>
-						</a>
-					</div>
-					<div>
-						<a href="#" title="">
-							<img src="/images/new-4.jpg" alt="" />
-							<h3 class="news__title">название новости или акции</h3>
-						</a>
+				<div class="tab tab-current" id="tab-news">
+					<div id="news-carousel">
+						<div>
+							<a href="#" title="">
+								<img src="/images/new-1.jpg" alt="" />
+								<h3 class="news__title">название новости или акции</h3>
+							</a>
+						</div>
+						<div>
+							<a href="#" title="">
+								<img src="/images/new-2.jpg" alt="" />
+								<h3 class="news__title">название новости или акции</h3>
+							</a>
+						</div>
+						<div>
+							<a href="#" title="">
+								<img src="/images/new-3.jpg" alt="" />
+								<h3 class="news__title">название новости или акции</h3>
+							</a>
+						</div>
+						<div>
+							<a href="#" title="">
+								<img src="/images/new-4.jpg" alt="" />
+								<h3 class="news__title">название новости или акции</h3>
+							</a>
+						</div>
+						<div>
+							<a href="#" title="">
+								<img src="/images/new-4.jpg" alt="" />
+								<h3 class="news__title">название новости или акции</h3>
+							</a>
+						</div>
+					</div>					
+				</div>
+
+				<div class="tab" id="tab-actions">
+					<div id="actions-carousel">
+						<div>
+							<a href="#" title="">
+								<img src="/images/new-3.jpg" alt="" />
+								<h3 class="news__title">название акции</h3>
+							</a>
+						</div>
+						<div>
+							<a href="#" title="">
+								<img src="/images/new-4.jpg" alt="" />
+								<h3 class="news__title">название акции</h3>
+							</a>
+						</div>
+						<div>
+							<a href="#" title="">
+								<img src="/images/new-1.jpg" alt="" />
+								<h3 class="news__title">название акции</h3>
+							</a>
+						</div>
+						<div>
+							<a href="#" title="">
+								<img src="/images/new-3.jpg" alt="" />
+								<h3 class="news__title">название акции</h3>
+							</a>
+						</div>
+						<div>
+							<a href="#" title="">
+								<img src="/images/new-1.jpg" alt="" />
+								<h3 class="news__title">название акции</h3>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -513,6 +551,7 @@
 		<div class="container">
 			<div class="d-flex justify-content-between align-items-center">
 				<div class="copyright">
+					<button type="button" class="btnadd" id="install-button">подписаться</button>
 					Copyright © 2019 <a href="#" title="">Ваша формула успеха</a>
 				</div>
 				<div class="social d-flex">
@@ -583,6 +622,20 @@
 			}
 		}
 	}
+
+	$('.news-actions .title a').click(function(e){
+		e.preventDefault();
+		var $this = $(this),
+			target = $this.data('target');
+
+		$('.news-actions .title a.current').removeClass('current');
+		$this.addClass('current');
+		$('.news-actions .carousel .tab-current').removeClass('tab-current');
+		$(target).addClass('tab-current');
+
+		$('#actions-carousel').slick('reinit');
+	});
+
 </script>
 </body>
 </html>
