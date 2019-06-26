@@ -4366,7 +4366,7 @@ label.error {
   background-image: url(../images/bg/header-bg.webp); }
 
 .homepage .header {
-  background: url(../images/bg/header-bg.jpg) no-repeat;
+  background: url(../images/bg/header-bg.jpg) no-repeat #303030;
   background-size: cover; }
   .homepage .header .logo {
     position: absolute;

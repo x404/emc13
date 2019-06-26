@@ -76,13 +76,13 @@ gulp.task('compress', function(){
 	pump([
 			gulp.src([  // Берем все необходимые библиотеки
 				config.templateDir + '/js/modernizr-custom-webp.js',
-				config.templateDir + '/js/modernizr.js',
-				config.libsDir + '/jquery/dist/jquery.slim.min.js',
+				// config.templateDir + '/js/modernizr.js',
+				config.libsDir + '/jquery/dist/jquery.min.js',
 				config.libsDir + '/jquery-validation/dist/jquery.validate.min.js',
 				config.templateDir + '/js/util.js',
 				// config.sourceDir + '/js/tab.js',
 				// config.templateDir + '/js/collapse.js',
-				config.templateDir + '/js/popper.min.js',
+				// config.templateDir + '/js/popper.min.js',
 				config.templateDir + '/js/jquery.fancybox.min.js'
 			]),
 			concat('libs.min.js'), // Собираем их в кучу в новом файле libs.min.js
@@ -252,7 +252,7 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
 	var buildJs = gulp.src([ // move js to production
 		config.templateDir + '/js/libs.min.js',
 		config.templateDir + '/js/slick.min.js',
-		config.templateDir + '/js/mymodal.js',
+		config.templateDir + '/js/mypopup.js',
 		config.templateDir + '/js/engine.js'
 	])
 	.pipe(gulp.dest(config.templateDestDir + '/js'));
@@ -266,6 +266,7 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
 	// var buildFavicon = gulp.src('app/the_favicon/*.*').pipe(gulp.dest(config.destDir + '/the_favicon'));
 
 	var buildHtml = gulp.src('app/*.html').pipe(gulp.dest(config.destDir + '/'));
+	var buildData = gulp.src('app/works-data.txt').pipe(gulp.dest(config.destDir + '/'));
 	var buildHtaccess = gulp.src('app/.htaccess').pipe(gulp.dest(config.destDir));
 	var buildrobots = gulp.src('app/robots.txt').pipe(gulp.dest(config.destDir));
 	var buildProjectTmpImages = gulp.src('app/images/**/*').pipe(gulp.dest(config.destDir + '/images'));
